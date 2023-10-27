@@ -1,0 +1,1172 @@
+{
+  "AGRICULTURE": {
+    "Exploring Animals and Plants": {
+      "Credits": 0.5,
+      "Grades": [9],
+      "isLaude": false,
+      "Description": "This course introduces students to the fascinating world of animals and plants, providing a foundational understanding of the kingdom of life. Students will explore the diversity of species and the relationships between animals and plants."
+    },
+    "Exploring Food and Wisconsin Agriculture": {
+      "Credits": 0.5,
+      "Grades": [9],
+      "isLaude": false,
+      "Description": "This course delves into the world of food and agriculture with a focus on Wisconsin. Students will learn about food production, agriculture, and the role Wisconsin plays in these industries."
+    },
+    "Vet Science I": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "isLaude": false,
+      "Description": "Vet Science I provides students with an introduction to veterinary science. Topics covered include animal health, care, and basic veterinary procedures."
+    },
+    "Vet Science II": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "isLaude": false,
+      "Prerequisites": "Vet Science I",
+      "Description": "Vet Science II builds on the knowledge gained in Vet Science I. Students will explore advanced topics in veterinary science and practical skills."
+    },
+    "Plant Science (AS)": {
+      "Skyward": "PLANT SCIENCE [trimester] AS-BTC",
+      "Credits": 1,
+      "Grades": [10, 11, 12],
+      "isLaude": true,
+      "Description": "Plant Science (AS) is an advanced course that focuses on the study of plants, including their growth, development, and practical applications in agriculture."
+    },
+    "Wildlife Ecology – Fish and Birds": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "isLaude": false,
+      "Description": "This course is dedicated to the study of fish and bird species and their ecological significance in the natural world."
+    },
+    "Wildlife Ecology - Mammals": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "isLaude": false,
+      "Description": "Wildlife Ecology - Mammals explores the world of mammals and their role in ecosystems and conservation."
+    },
+    "Large Animal Science (AS) ": {
+      "Skyward": "LG ANIMAL SCIENCE [trimester] AS-BTC",
+      "Credits": 1,
+      "Grades": [11, 12],
+      "isLaude": true,
+      "Prerequisites": "Vet Science I and II",
+      "Description": "Large Animal Science (AS) is an advanced study of large animals with a focus on their care, management, and agricultural importance."
+    },
+    "Ag Independent Study": {
+      "Credits": 0.5,
+      "Grades": [11, 12],
+      "isLaude": false,
+      "Description": "Ag Independent Study allows motivated students to explore agricultural topics of their choice with instructor consent."
+    },
+    "Ag Business Management & Leadership": {
+      "Credits": 1,
+      "Grades": [12],
+      "isLaude": false,
+      "Description": "Ag Business Management & Leadership is a senior-level course focusing on the principles of business management in the context of agriculture."
+    }
+  },
+  "ART": {
+    "AP 2-D ART & DESIGN A": {
+      "Credits": 0.5,
+      "Grades": [11, 12],
+      "isLaude": true,
+      "Fee": 20,
+      "Prerequisites": "Advanced Drawing or Advanced Painting (Grade of C or better)",
+      "Description": "AP 2-D Art & Design A is a 1-credit course for 11th and 12th-grade students. This course focuses on two-dimensional art and design, enabling students to build a portfolio for the Advanced Placement (AP) exam while honing their creative and technical skills."
+    },
+    "Exploring Art": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "isLaude": false,
+      "Fees": 10,
+      "Description": "Exploring Art is an introductory course for students of all grades interested in exploring various forms of visual art."
+    },
+    "Art Foundations I": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "isLaude": false,
+      "Fees": 10,
+      "Description": "Art Foundations I is the first step in building a strong foundation in visual art. It provides an introduction to fundamental concepts and techniques."
+    },
+    "Art Foundations II": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": "Art Foundations I",
+      "isLaude": false,
+      "Fees": 10,
+      "Description": "Art Foundations II continues the exploration of visual art, building upon the skills and knowledge gained in Art Foundations I."
+    },
+    "Drawing": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": "Art Foundations I",
+      "Recommended": "Art Foundations II",
+      "isLaude": false,
+      "Fees": 10,
+      "Description": "Drawing is an art course that focuses on the fundamental principles and techniques of drawing. It's a great way to develop artistic skills."
+    },
+    "Painting": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": "Drawing or Art Foundations II",
+      "isLaude": false,
+      "Fees": 10,
+      "Description": "Painting allows students to explore the world of painting, applying their creativity and skills to create visual art using different mediums."
+    },
+    "Ceramics I": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": "Art Foundations I",
+      "isLaude": false,
+      "Fees": 10,
+      "Description": "Ceramics I introduces students to the art of creating pottery and ceramics, allowing them to work with clay and explore their creativity."
+    },
+    "Ceramics II": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": "Ceramics I",
+      "isLaude": false,
+      "Fees": 10,
+      "Description": "Ceramics II builds on the skills acquired in Ceramics I, enabling students to create more complex ceramic pieces."
+    },
+    "Advanced Drawing ": {
+      "Skyward": "AV Drawing",
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Prerequisites": "Drawing (Grade of C or better)",
+      "isLaude": true,
+      "Fees": 10,
+      "Description": "Advanced Drawing is an advanced course for students who have excelled in drawing. It allows for a more in-depth exploration of advanced drawing techniques."
+    },
+    "Advanced Painting ": {
+      "Skyward": "AV Painting",
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Prerequisites": "Painting (Grade of C or better)",
+      "isLaude": true,
+      "Fees": 10,
+      "Description": "Advanced Painting is an advanced course for students who have excelled in painting. It offers a deeper exploration of advanced painting techniques."
+    }
+  },
+
+  "BUSINESS & MARKETING": {
+    "Introduction to Business and Marketing": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "isLaude": false,
+      "Description": "Introduction to Business and Marketing is an introductory course that provides students with an overview of the business and marketing fields."
+    },
+    "Computers In the Workplace": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "isLaude": false,
+      "Description": "Computers In the Workplace focuses on the use of computers in business environments and helps students develop essential digital skills."
+    },
+    "Entrepreneurship": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": "Introduction to Business and Marketing",
+      "isLaude": false,
+      "Description": "Entrepreneurship is designed for students interested in starting and running their own businesses. It builds on concepts introduced in Introduction to Business and Marketing."
+    },
+    "Principles of Marketing": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": "Introduction to Business and Marketing",
+      "isLaude": false,
+      "Description": "Principles of Marketing explores the fundamental principles and concepts of marketing in the business world."
+    },
+    "Business Law": {
+      "Credits": 0.5,
+      "Grades": [11, 12],
+      "Prerequisites": "Introduction to Business and Marketing",
+      "isLaude": false,
+      "Description": "Business Law delves into the legal aspects of business operations and transactions."
+    },
+    "Sports and Entertainment Management": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Prerequisites": "Introduction to Business and Marketing",
+      "Suggested Prerequisite": "Principles of Marketing",
+      "isLaude": false,
+      "Description": "Sports and Entertainment Management focuses on the management and marketing of sports and entertainment industries. It is recommended to have completed Principles of Marketing."
+    },
+    "Introduction to Accounting": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Suggested Prerequisite": "Computers In the Workplace",
+      "isLaude": false,
+      "Description": "Introduction to Accounting introduces students to fundamental accounting principles and practices."
+    },
+    "Intermediate Accounting": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Prerequisites": "At least a C in Introduction to Accounting",
+      "isLaude": false,
+      "Description": "Intermediate Accounting builds on the basics and provides a deeper understanding of accounting procedures."
+    },
+    "Advanced Accounting ": {
+      "Credits": 0.5,
+      "Grades": [11, 12],
+      "Prerequisites": "At least a C in Intermediate Accounting",
+      "isLaude": true,
+      "Description": "Advanced Accounting is an advanced course for students with a strong foundation in accounting."
+    },
+    "International Business": {
+      "Credits": 0.5,
+      "Grades": [11, 12],
+      "Prerequisites": "Introduction to Business and Marketing",
+      "isLaude": false,
+      "Description": "International Business explores global business practices and strategies."
+    },
+    "Retail Design (School Store) (Fall)": {
+      "Credits": 0.5,
+      "Grades": [11, 12],
+      "Prerequisites": "Introduction to Business and Marketing",
+      "Repeatable for Credit": true,
+      "isLaude": false,
+      "Description": "Retail Design is a fall course that focuses on designing and managing a school store."
+    },
+    "Retail Communications (School Store) (Winter)": {
+      "Credits": 0.5,
+      "Grades": [11, 12],
+      "Prerequisites": "Introduction to Business and Marketing",
+      "Repeatable for Credit": true,
+      "isLaude": false,
+      "Description": "Retail Communications is a winter course that emphasizes effective communication in managing a school store."
+    },
+    "Retail Management (School Store) (Spring)": {
+      "Credits": 0.5,
+      "Grades": [11, 12],
+      "Prerequisites": "Introduction to Business and Marketing",
+      "Repeatable for Credit": true,
+      "isLaude": false,
+      "Description": "Retail Management is a spring course that focuses on the management of a school store."
+    },
+    "Financial Lit & Employability Skills (FLES)": {
+      "Credits": 0.5,
+      "Grades": [11],
+      "isLaude": false,
+      "Description": "Financial Lit & Employability Skills (FLES) provides students with essential financial literacy and employability skills."
+    }
+  },
+  "CHILD & EDUCATION STUDIES": {
+    "Careers with Children (AS) ": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Prerequisites": [],
+      "isLaude": true,
+      "Description": "Careers with Children (AS)  is an advanced study course focusing on careers involving children."
+    },
+    "Early Childhood Education (AS) ": {
+      "Credits": 0.5,
+      "Grades": [11, 12],
+      "Prerequisites": "Careers with Children",
+      "isLaude": true,
+      "Description": "Early Childhood Education (AS)  is an advanced study course that prepares students for careers in early childhood education. Students must have completed Careers with Children."
+    }
+  },
+  "COMPUTER SCIENCE": {
+    "Introduction to Computer Science": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": [],
+      "isLaude": false,
+      "Description": "Introduction to Computer Science is a half-credit course open to students in grades 9-12."
+    },
+    "IT Fundamentals": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": [],
+      "isLaude": false,
+      "Description": "IT Fundamentals is a half-credit course open to students in grades 9-12."
+    },
+    "Computer Programming": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": ["Introduction to Computer Science", "Algebra 1"],
+      "isLaude": false,
+      "Description": "Computer Programming is a half-credit course open to students in grades 9-12. Prerequisites include Introduction to Computer Science or Algebra 1."
+    },
+    "AP Computer Science A ": {
+      "Credits": 1,
+      "Grades": [10, 11, 12],
+      "Prerequisites": [
+        "Introduction to Computer Science",
+        "Computer Programming",
+        "Geometry"
+      ],
+      "isLaude": true,
+      "Description": "AP Computer Science A is a full-credit course available to students in grades 10-12. Prerequisites include Introduction to Computer Science, Computer Programming, or Geometry."
+    },
+    "AP Computer Science Principles (PLTW) (AS) ": {
+      "Credits": 1,
+      "Grades": [10, 11, 12],
+      "Prerequisites": [
+        "Introduction to Computer Science",
+        "Computer Programming",
+        "Geometry"
+      ],
+      "isLaude": true,
+      "Description": "AP Computer Science Principles (PLTW) is a full-credit course available to students in grades 10-12. Prerequisites include Introduction to Computer Science, Computer Programming, or Geometry."
+    },
+    "Cybersecurity (PLTW) ": {
+      "Credits": 1,
+      "Grades": [10, 11, 12],
+      "Prerequisites": [
+        "Computer Programming",
+        "AP Computer Science Principles",
+        "AP Computer Science A"
+      ],
+      "isLaude": true,
+      "Description": "Cybersecurity (PLTW) is a full-credit course available to students in grades 10-12. Prerequisites include Computer Programming, AP Computer Science Principles, or AP Computer Science A."
+    }
+  },
+  "DIGITAL MEDIA AND TECHNOLOGY": {
+    "Digital Media I": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": [],
+      "isLaude": false,
+      "Description": "Digital Media I is a half-credit course open to students in grades 9-12."
+    },
+    "Digital Media II": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": ["Digital Media I"],
+      "isLaude": false,
+      "Description": "Digital Media II is a half-credit course open to students in grades 9-12. Prerequisite is Digital Media I."
+    },
+    "Media Production": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": ["Digital Media I", "Digital Media II"],
+      "isLaude": false,
+      "Description": "Media Production is a half-credit course open to students in grades 9-12. Prerequisites are Digital Media I and II."
+    },
+    "Game Design I": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Prerequisites": ["Digital Media I", "Digital Media II"],
+      "isLaude": false,
+      "Description": "Game Design I is a half-credit course open to students in grades 10-12. Prerequisites are Digital Media I and II."
+    },
+    "Video Production I": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Prerequisites": ["Digital Media I", "Digital Media II"],
+      "isLaude": false,
+      "Description": "Video Production I is a half-credit course open to students in grades 10-12. Prerequisites are Digital Media I and II."
+    },
+    "Video Production II": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Prerequisites": ["Video Production I"],
+      "isLaude": false,
+      "Description": "Video Production II is a half-credit course open to students in grades 10-12. Prerequisite is Video Production I."
+    },
+    "Web Design": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Prerequisites": ["Digital Media I", "Digital Media II"],
+      "isLaude": false,
+      "Description": "Web Design is a half-credit course open to students in grades 10-12. Prerequisites are Digital Media I and II."
+    }
+  },
+  "ENGINEERING": {
+    "Introduction to Engineering Design (PLTW)": {
+      "Credits": 1,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": [],
+      "isLaude": false,
+      "Description": "Introduction to Engineering Design (PLTW) is a 1-credit course that introduces students to the principles of engineering design."
+    },
+    "Principles of Engineering (PLTW)": {
+      "Credits": 1,
+      "Grades": [10, 11, 12],
+      "Prerequisites": ["Strong Math Skills Required"],
+      "isLaude": false,
+      "Description": "Principles of Engineering (PLTW) is a 1-credit course that explores fundamental engineering principles and problem-solving techniques."
+    },
+    "Computer Science Principles (PLTW)": {
+      "Credits": 1,
+      "Grades": [10, 11, 12],
+      "Prerequisites": [
+        "Introduction to Computer Science",
+        "Computer Programming",
+        "Geometry"
+      ],
+      "isLaude": false,
+      "Description": "Computer Science Principles (PLTW) is a 1-credit course that covers the principles of computer science and programming with an emphasis on problem-solving."
+    }
+  },
+  "ENGLISH": {
+    "English 9 or Honors English 9 ": {
+      "Credits": 1,
+      "Grades": [9],
+      "Prerequisites": [],
+      "isLaude": true,
+      "Description": "English 9 or Honors English 9  is a 1-credit course that focuses on essential English language and literature skills for ninth-grade students."
+    },
+    "English 10 or Honors English 10 ": {
+      "Credits": 1,
+      "Grades": [10],
+      "Prerequisites": [],
+      "isLaude": true,
+      "Description": "English 10 or Honors English 10  is a 1-credit course that enhances students' English language and literary skills, with a focus on tenth-grade content."
+    },
+    "English 11 (AS)": {
+      "Credits": 1,
+      "Grades": [11],
+      "Prerequisites": [],
+      "isLaude": true,
+      "Description": "English 11 (AS) is a 1-credit course that provides eleventh-grade students with advanced English language and literature knowledge and skills."
+    },
+    "AP English Language & Composition ": {
+      "Credits": 1,
+      "Grades": [11, 12],
+      "Prerequisites": [
+        "Honors English 10 recommended or B or higher in English 10"
+      ],
+      "isLaude": true,
+      "Description": "AP English Language & Composition  is a 1-credit course for eleventh and twelfth-grade students, emphasizing advanced language and composition skills."
+    },
+    "AP English Literature & Composition ": {
+      "Credits": 1,
+      "Grades": [11, 12],
+      "Prerequisites": ["Honors English 10 required for Juniors"],
+      "isLaude": true,
+      "Description": "AP English Literature & Composition  is a 1-credit course designed for juniors and seniors, focusing on advanced literary analysis and composition."
+    },
+    "World Literature": {
+      "Credits": 0.5,
+      "Grades": [12],
+      "Prerequisites": [],
+      "isLaude": true,
+      "Description": "World Literature is a 0.5-credit course for twelfth-grade students that explores literature from around the world."
+    },
+    "Speech": {
+      "Credits": 0.5,
+      "Grades": [12],
+      "Prerequisites": [],
+      "isLaude": true,
+      "Description": "Speech is a 0.5-credit course for twelfth-grade students, focusing on the art of public speaking and effective communication."
+    },
+    "British Literature": {
+      "Credits": 0.5,
+      "Grades": [12],
+      "Prerequisites": [],
+      "isLaude": true,
+      "Description": "British Literature is a 0.5-credit course for twelfth-grade students, exploring the rich literary tradition of British literature."
+    },
+    "Contemporary Fiction Literature": {
+      "Credits": 0.5,
+      "Grades": [12],
+      "Prerequisites": [],
+      "isLaude": true,
+      "Description": "Contemporary Fiction Literature is a 0.5-credit course for twelfth-grade students, delving into contemporary fiction works."
+    },
+    "Critical Perspectives in Mass Communication": {
+      "Credits": 0.5,
+      "Grades": [12],
+      "Prerequisites": [],
+      "isLaude": true,
+      "Description": "Critical Perspectives in Mass Communication is a 0.5-credit course for twelfth-grade students that examines mass communication from a critical perspective."
+    },
+    "Journalistic Publications": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Prerequisites": ["Gr 10 & 11"],
+      "isLaude": true,
+      "Description": "Journalistic Publications is a 0.5-credit course open to students in grades 10-12, focusing on journalism and publication with a prerequisite of Grade 10 & 11."
+    }
+  },
+  "FAMILY & CONSUMER EDUCATION": {
+    "Foods for Life": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Prerequisites": [],
+      "Fee": 20,
+      "isLaude": false,
+      "Description": "Foods for Life is a 0.5-credit course open to students in grades 10-12. This course teaches essential cooking and nutrition skills with a $20 fee."
+    },
+    "Food Science": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Prerequisites": [],
+      "Fee": 20,
+      "isLaude": false,
+      "Description": "Food Science is a 0.5-credit course open to students in grades 10-12. This course explores the science behind food and food production with a $20 fee."
+    },
+    "Culinary Arts": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Prerequisites": [],
+      "Fee": 20,
+      "isLaude": false,
+      "Description": "Culinary Arts is a 0.5-credit course open to students in grades 10-12. This course focuses on advanced culinary skills and techniques with a $20 fee."
+    },
+    "Fashion Styling": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": [],
+      "MaterialsCost": "Students will have to pay for project materials",
+      "isLaude": true,
+      "Description": "Fashion Styling is a 0.5-credit course open to students in grades 9-12. This course explores the art of fashion styling, and students will need to cover project material costs."
+    },
+    "Housing Design": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": [],
+      "isLaude": true,
+      "Description": "Housing Design is a 0.5-credit course open to students in grades 9-12, focusing on the principles of housing and interior design."
+    }
+  },
+  "HEALTH SCIENCE": {
+    "Spanish in the Medical Field": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Prerequisites": ["C- or better in 2nd trimester of Spanish 2"],
+      "isLaude": true,
+      "Description": "Spanish in the Medical Field is a 0.5-credit course open to students in grades 10-12. This course focuses on medical terminology in Spanish. Prerequisite is a C- or better in the 2nd trimester of Spanish 2."
+    },
+    "Principles of Biomedical Science (PLTW) (AS) ": {
+      "Credits": 1,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": [
+        "Freshmen need a B or better in the last Science course"
+      ],
+      "isLaude": true,
+      "Description": "Principles of Biomedical Science (PLTW) (AS)  is a 1-credit course open to students in grades 9-12. This course explores fundamental principles of biomedical science, including human medicine and physiology. Freshmen need a B or better in their last Science course to enroll."
+    },
+    "Human Body Systems (PLTW) (AS) ": {
+      "Credits": 1,
+      "Grades": [10, 11, 12],
+      "Prerequisites": [
+        "Principles of Biomedical Science (Grade of C- or better)"
+      ],
+      "isLaude": true,
+      "Description": "Human Body Systems (PLTW) (AS)  is a 1-credit course open to students in grades 10-12. This course delves into the systems of the human body and their functions. Prerequisite is successful completion of Principles of Biomedical Science with a grade of C- or better."
+    },
+    "Structural Anatomy & Physiology of the Human Body": {
+      "Credits": 0.5,
+      "Grades": [11, 12],
+      "Prerequisites": ["Biology (Grade of C or better)"],
+      "isLaude": true,
+      "Description": "Structural Anatomy & Physiology of the Human Body is a 0.5-credit course open to students in grades 11-12. This course focuses on the structural aspects of human anatomy and physiology. Prerequisite is Biology with a grade of C or better."
+    },
+    "Cellular Anatomy and Physiology of the Human Body": {
+      "Credits": 0.5,
+      "Grades": [11, 12],
+      "Prerequisites": ["Biology (Grade of C or better)"],
+      "isLaude": true,
+      "Description": "Cellular Anatomy and Physiology of the Human Body is a 0.5-credit course open to students in grades 11-12. This course covers cellular-level anatomy and physiology of the human body. Prerequisite is Biology with a grade of C or better."
+    },
+    "Nursing Assistant ": {
+      "Credits": 1,
+      "Grades": [11, 12],
+      "Prerequisites": ["Completed DPI Start College Now Program"],
+      "isLaude": true,
+      "Description": "Nursing Assistant  is a 1-credit course open to students in grades 11-12. This course prepares students to become certified nursing assistants. Prerequisite is the completion of the DPI Start College Now Program."
+    }
+  },
+  "Mathematics": {
+    "Geometry, Honors Geometry, or Fundamentals of Geometry": {
+      "Credits": 1,
+      "Grades": [9, 10],
+      "Prerequisites": "Algebra I, Passing first trimester of Geometry (prerequisite for the second trimester), Fundamentals of Geometry (teacher recommended)",
+      "Description": "Geometry, Honors Geometry, or Fundamentals of Geometry is a 1-credit course available to students in grades 9 and 10. This course covers geometric principles and shapes. Prerequisites include Algebra I and, for Fundamentals of Geometry, teacher recommendation."
+    },
+    "Algebra II or Honors Algebra II": {
+      "Credits": 1,
+      "Grades": [10, 11, 12],
+      "Prerequisites": "Algebra I, Geometry, Algebra II (prerequisite for college admission to the UW system schools)",
+      "Description": "Algebra II or Honors Algebra II is a 1-credit course open to students in grades 10-12. This course builds on algebraic concepts and is a prerequisite for college admission to UW system schools."
+    },
+    "College Algebra": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Prerequisites": "Algebra II",
+      "Description": "College Algebra is a 0.5-credit course available to students in grades 10-12. This course explores college-level algebraic concepts."
+    },
+    "Trigonometry": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Prerequisites": "Algebra II",
+      "Description": "Trigonometry is a 0.5-credit course open to students in grades 10-12. This course focuses on trigonometric principles and applications."
+    },
+    "Probability & Statistics": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Prerequisites": "Algebra II",
+      "Description": "Probability & Statistics is a 0.5-credit course available to students in grades 10-12. This course covers probability and statistical analysis."
+    },
+    "Precalculus": {
+      "Credits": 1,
+      "Grades": [10, 11, 12],
+      "Prerequisites": "Algebra II (Grade of B or higher), or Honors Algebra II",
+      "Description": "Precalculus is a 1-credit course open to students in grades 10-12. Prerequisites include a grade of B or higher in Algebra II or completion of Honors Algebra II."
+    },
+    "Shop Math I": {
+      "Credits": 0.5,
+      "Grades": [11, 12],
+      "Prerequisites": "Algebra I and Geometry or Fundamentals of Geometry",
+      "Description": "Shop Math I is a 0.5-credit course available to students in grades 11 and 12. This course covers mathematical concepts relevant to trade and shop work."
+    },
+    "Shop Math II": {
+      "Credits": 0.5,
+      "Grades": [11, 12],
+      "Prerequisites": "Shop Math 1",
+      "Description": "Shop Math II is a 0.5-credit course open to students in grades 11 and 12. Prerequisite is successful completion of Shop Math I."
+    },
+    "Intermediate Algebra": {
+      "Credits": 1,
+      "Grades": [11, 12],
+      "Prerequisites": "Algebra I and Geometry or Fundamentals of Geometry; Passing first trimester of Intermediate Algebra (prerequisite for the second trimester)",
+      "Description": "Intermediate Algebra is a 1-credit course available to students in grades 11 and 12. This course covers advanced algebraic concepts. Prerequisites include Algebra I, Geometry or Fundamentals of Geometry, and the successful completion of the first trimester of Intermediate Algebra."
+    },
+    "AP Calculus": {
+      "Credits": 1,
+      "Grades": [12],
+      "isLaude": true,
+      "Prerequisites": "Precalculus (Grade of B or higher)",
+      "Description": "AP Calculus is a 1-credit course open to students in grade 12. This is an advanced placement calculus course. Prerequisite is successful completion of Precalculus with a grade of B or higher."
+    },
+    "AP Statistics": {
+      "Credits": 1,
+      "Grades": [11, 12],
+      "isLaude": true,
+      "Prerequisites": "Algebra II (Grade of B or higher), or Honors Algebra II",
+      "Description": "AP Statistics is a 1-credit course available to students in grades 11 and 12. This is an advanced placement statistics course. Prerequisites include a grade of B or higher in Algebra II or completion of Honors Algebra II."
+    }
+  },
+  "Music": {
+    "Chamber Ensemble": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": "Non-Audition, Instructor Consent",
+      "Description": "Chamber Ensemble is a 0.5-credit course open to students in grades 9-12. This course is non-audition and requires instructor consent. Students explore ensemble music."
+    },
+    "Symphonic Band": {
+      "Credits": 1,
+      "Grades": [9, 10],
+      "Prerequisites": "Audition OR Instructor Consent",
+      "Description": "Symphonic Band is a 1-credit course available to students in grades 9 and 10. Students can join through audition or with instructor consent. The course focuses on band music performance."
+    },
+    "Wind Ensemble": {
+      "Credits": 1,
+      "Grades": [11, 12],
+      "Prerequisites": "Audition OR Instructor Consent",
+      "Description": "Wind Ensemble is a 1-credit course open to students in grades 11 and 12. Entry is through audition or with instructor consent. The course explores wind music performance."
+    },
+    "Women’s Show Choir (Octave Above)": {
+      "Credits": 1,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": "Audition",
+      "Description": "Women’s Show Choir (Octave Above) is a 1-credit course open to students in grades 9-12. Entry is by audition. The course focuses on show choir performance."
+    },
+    "Mixed Concert Choir": {
+      "Credits": 1,
+      "Grades": [9, 10, 11, 12],
+      "Description": "Mixed Concert Choir is a 1-credit course available to students in grades 9-12. This course explores mixed choir performance."
+    },
+    "Mixed Show Choir (Choralation)": {
+      "Credits": 1,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": "Audition",
+      "Description": "Mixed Show Choir (Choralation) is a 1-credit course open to students in grades 9-12. Entry is by audition, and the course focuses on show choir performance."
+    },
+    "Chamber Choir": {
+      "Credits": 1,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": "Audition",
+      "Description": "Chamber Choir is a 1-credit course available to students in grades 9-12. Entry is by audition, and the course explores chamber choir performance."
+    },
+    "Music Theory I": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": "Offered 2024-2025",
+      "Description": "Music Theory I is a 0.5-credit course open to students in grades 9-12. This course covers fundamental music theory concepts and is offered in the 2024-2025 academic year."
+    },
+    "AP Music Theory": {
+      "Credits": 1,
+      "Grades": [10, 11, 12],
+      "isLaude": true,
+      "Prerequisites": "Music Theory I, Offered 2023-2024",
+      "Description": "AP Music Theory is a 1-credit course available to students in grades 10-12. Prerequisite is the completion of Music Theory I, and the course is offered in the 2023-2024 academic year."
+    }
+  },
+  "Physical Education & Health": {
+    "Health": {
+      "Credits": 0.5,
+      "Grades": [9],
+      "Description": "Health is a 0.5-credit course available to 9th-grade students. This course covers essential topics related to personal health and well-being."
+    },
+    "Freshman Physical Education": {
+      "Credits": 0.5,
+      "Grades": [9],
+      "Description": "Freshman Physical Education is a 0.5-credit course open to 9th-grade students. This course emphasizes physical fitness and exercise."
+    },
+    "Athletic Performance": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Description": "Athletic Performance is a 0.5-credit course available to students in grades 9-12. This course focuses on enhancing athletic abilities and performance."
+    },
+    "Lifelong Activities and Fitness": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Description": "Lifelong Activities and Fitness is a 0.5-credit course open to students in grades 10-12. This course encourages lifelong physical fitness and engagement in various activities."
+    },
+    "Competitive Sports": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Description": "Competitive Sports is a 0.5-credit course available to students in grades 10-12. This course involves participation in competitive sports activities."
+    },
+    "Modified Physical Education": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11],
+      "Prerequisites": "Department Selection Only",
+      "Description": "Modified Physical Education is a 0.5-credit course open to 9th, 10th, and 11th-grade students. Entry is by departmental selection only."
+    },
+    "Music Block Physical Education": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": "Students must be taking a Music class with the Music block",
+      "Description": "Music Block Physical Education is a 0.5-credit course open to 9th-12th graders. To enroll, students must be concurrently taking a Music class as part of the Music block."
+    },
+    "Summer School Physical Education": {
+      "Credits": 0.5,
+      "Grades": "Incoming 10-11",
+      "Description": "Summer School Physical Education is a 0.5-credit course for incoming 10th and 11th graders. It allows students to fulfill physical education requirements during the summer."
+    }
+  },
+  "Science": {
+    "Biology": {
+      "Credits": 1,
+      "Grades": [9],
+      "Description": "Biology is a 1-credit course available to 9th-grade students. This course explores fundamental biological concepts and the study of living organisms."
+    },
+    "Honors Biology": {
+      "Credits": 1,
+      "Grades": [9],
+      "isLaude": true,
+      "Description": "Honors Biology is a 1-credit course open to 9th-grade students. This advanced course covers biology with a more rigorous academic focus."
+    },
+    "Earth Science": {
+      "Credits": 1,
+      "Grades": [9, 10],
+      "Prerequisites": "Students in 9th grade must also be taking Geometry",
+      "Description": "Earth Science is a 1-credit course available to 9th and 10th graders. In 9th grade, students taking this course should also be enrolled in Geometry. The course explores the Earth's physical and environmental characteristics."
+    },
+    "Honors Earth Science": {
+      "Credits": 1,
+      "Grades": [9, 10],
+      "Prerequisites": "Students in 9th grade must also be taking Geometry",
+      "isLaude": true,
+      "Description": "Honors Earth Science is a 1-credit course open to 9th and 10th graders. In 9th grade, students taking this course should also be enrolled in Geometry. This advanced course focuses on Earth science with a higher level of academic challenge."
+    },
+    "Chemistry": {
+      "Credits": 1,
+      "Grades": [10, 11, 12],
+      "Prerequisites": "Completion or current enrollment in Algebra II",
+      "Description": "Chemistry is a 1-credit course available to students in grades 10-12. Prerequisite is the completion or concurrent enrollment in Algebra II. This course covers the principles of chemistry."
+    },
+    "Honors Chemistry": {
+      "Credits": 1,
+      "Grades": [10, 11, 12],
+      "Prerequisites": "Completion or current enrollment in Algebra II",
+      "isLaude": true,
+      "Description": "Honors Chemistry is a 1-credit course open to students in grades 10-12. Prerequisite is the completion or concurrent enrollment in Algebra II. This advanced course delves into chemistry with a more challenging curriculum."
+    },
+    "Physical Science": {
+      "Credits": 1,
+      "Grades": [11],
+      "Description": "Physical Science is a 1-credit course available to 11th-grade students. This course explores physical science principles and concepts."
+    },
+    "Honors Physics": {
+      "Credits": 1,
+      "Grades": [11, 12],
+      "Prerequisites": "Algebra II (Enroll or earned credit) and 2 science credits",
+      "isLaude": true,
+      "Description": "Honors Physics is a 1-credit course open to students in grades 11 and 12. Prerequisites include enrollment or earned credit in Algebra II and completion of 2 science credits. This advanced course focuses on physics with a higher level of academic challenge."
+    },
+    "Environmental Science": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Description": "Environmental Science is a 0.5-credit course available to students in grades 9-12. This course explores environmental issues and ecological concepts."
+    },
+    "Astronomy": {
+      "Credits": 0.5,
+      "Grades": [9, 10, 11, 12],
+      "Description": "Astronomy is a 0.5-credit course open to students in grades 9-12. The course covers principles of astronomy and celestial bodies."
+    },
+    "Principles of Biomedical Science (PLTW)": {
+      "Credits": 1,
+      "Grades": [9, 10, 11, 12],
+      "Prerequisites": "Freshmen need a B or better in the last Science course",
+      "Description": "Principles of Biomedical Science (PLTW) is a 1-credit course available to students in grades 9-12. Freshmen should have earned a grade of B or better in their last science course to enroll in this course. The curriculum focuses on biomedical science principles."
+    },
+    "Human Body Systems (PLTW)": {
+      "Credits": 1,
+      "Grades": [10, 11, 12],
+      "Prerequisites": "Principles of Biomedical Science (Grade of C- or better)",
+      "Description": "Human Body Systems (PLTW) is a 1-credit course open to students in grades 10-12. Prerequisite is a grade of C- or better in Principles of Biomedical Science. This course delves into the human body's systems and functions."
+    },
+    "Structural Anatomy & Physiology of the Human Body": {
+      "Credits": 0.5,
+      "Grades": [11, 12],
+      "Prerequisites": "Biology (Grade of C or better)",
+      "Description": "Structural Anatomy & Physiology of the Human Body is a 0.5-credit course available to students in grades 11 and 12. Prerequisite is a grade of C or better in Biology. The course explores the structural and physiological aspects of the human body."
+    },
+    "Cellular Anatomy and Physiology of the Human Body": {
+      "Credits": 0.5,
+      "Grades": [11, 12],
+      "Prerequisites": "Biology (Grade of C or better)",
+      "Description": "Cellular Anatomy and Physiology of the Human Body is a 0.5-credit course open to students in grades 11 and 12. Prerequisite is a grade of C or better in Biology. This course focuses on cellular anatomy and physiological concepts."
+    },
+    "AP Biology": {
+      "Credits": 1,
+      "Grades": [10, 11, 12],
+      "Prerequisites": "Biology required. Chemistry and Anatomy & Physiology recommended",
+      "isLaude": true,
+      "Description": "AP Biology is a 1-credit course available to students in grades 10-12. Prerequisites include the completion of Biology and recommended enrollment in Chemistry and Anatomy & Physiology. This is an advanced placement biology course."
+    },
+    "AP Environmental Science": {
+      "Credits": 1,
+      "Grades": [10, 11, 12],
+      "Prerequisites": "Biology Required, B or higher in Biology or 2 science credits, Algebra I",
+      "isLaude": true,
+      "Description": "AP Environmental Science is a 1-credit course open to students in grades 10-12. Prerequisites include a requirement of Biology, a grade of B or higher in Biology or completion of 2 science credits, and completion of Algebra I. This is an advanced placement environmental science course."
+    },
+    "AP Chemistry": {
+      "Credits": 1,
+      "Grades": [11, 12],
+      "Prerequisites": "Chemistry (Grade of B or better) and Algebra II (Grade of C or better)",
+      "isLaude": true,
+      "Description": "AP Chemistry is a 1-credit course available to students in grades 11 and 12. Prerequisites include a grade of B or better in Chemistry and a grade of C or better in Algebra II. This is an advanced placement chemistry course."
+    }
+  },
+  "Social Studies": {
+    "History of Rock County and Southern Wisconsin": {
+      "Credits": 0.5,
+      "Grades": [10, 11, 12],
+      "Description": "History of Rock County and Southern Wisconsin is a 0.5-credit course open to students in grades 10-12. This course delves into the history of Rock County and Southern Wisconsin."
+    },
+    "U.S. History": {
+      "Credits": 1,
+      "Grades": [11],
+      "Description": "U.S. History is a 1-credit course available to 11th-grade students. The course covers the history of the United States."
+    },
+    "AP U.S. History": {
+      "Credits": 1,
+      "Grades": [11],
+      "Prerequisites": "AP World History, 3.0 Cum. GPA or B in World History recommended",
+      "isLaude": true,
+      "Description": "AP U.S. History is a 1-credit course open to 11th-grade students. Prerequisites include having completed AP World History and a recommended 3.0 cumulative GPA or a grade of B in World History. This is an advanced placement U.S. history course."
+    },
+    "Comparative Religions, Culture, and Philosophy": {
+      "Credits": 0.5,
+      "Grades": [11, 12],
+      "Description": "Comparative Religions, Culture, and Philosophy is a 0.5-credit course available to students in grades 11 and 12. The course explores different religions, cultures, and philosophical concepts."
+    },
+    "History of Warfare: Conflicts in the World": {
+      "Credits": 0.5,
+      "Grades": [11, 12],
+      "Description": "History of Warfare: Conflicts in the World is a 0.5-credit course open to students in grades 11 and 12. This course focuses on the history of conflicts and warfare worldwide."
+    },
+    "Women’s Studies": {
+      "Credits": 0.5,
+      "Grades": [12],
+      "Description": "Women’s Studies is a 0.5-credit course available to 12th-grade students. This course explores various aspects of women's studies and gender issues."
+    },
+    "AP U.S. Government and Politics": {
+      "Credits": 1,
+      "Grades": [12],
+      "Prerequisites": "3.0 Cumulative GPA recommended. AP Government and Politics fulfills the Civics requirement",
+      "isLaude": true,
+      "Description": "AP U.S. Government and Politics is a 1-credit course open to 12th-grade students. Prerequisites include a recommended 3.0 cumulative GPA. This course fulfills the Civics requirement and is an advanced placement U.S. government and politics course."
+    },
+    "Civics": {
+      "Credits": 0.5,
+      "Grades": [12],
+      "Description": "Civics is a 0.5-credit course available to 12th-grade students. The course covers the fundamental principles of civics and government."
+    },
+    "Contemporary Issues in America": {
+      "Credits": 0.5,
+      "Grades": [12],
+      "Description": "Contemporary Issues in America is a 0.5-credit course open to 12th-grade students. This course explores current issues and challenges in the United States."
+    },
+    "Psychology": {
+      "Credits": 0.5,
+      "Grades": [12],
+      "Description": "Psychology is a 0.5-credit course available to 12th-grade students. This course covers the fundamentals of psychology."
+    },
+    "AP Psychology": {
+      "Credits": 1,
+      "Grades": [12],
+      "Prerequisites": "3.0 Cumulative GPA recommended",
+      "isLaude": true,
+      "Description": "AP Psychology is a 1-credit course open to 12th-grade students. Prerequisites include a recommended 3.0 cumulative GPA. This is an advanced placement psychology course."
+    },
+    "Senior Social Studies Washington D.C. Seminar (Discovering Democracy) (Spring)": {
+      "Credits": 0.5,
+      "Grades": [12],
+      "Prerequisites": "Enrollment in AP U.S Government and Politics or first or second trimester Civics. Must have a C or better in AP US History or a B or better in US History. Students planning to go on the Discovering Democracy field trip must be in this class",
+      "Description": "The Senior Social Studies Washington D.C. Seminar (Discovering Democracy) is a 0.5-credit course available to 12th-grade students in the spring. Prerequisites include enrollment in AP U.S Government and Politics or first or second trimester Civics. Additionally, students must have earned a grade of C or better in AP US History or a grade of B or better in US History. This course is related to the Discovering Democracy field trip."
+    },
+    "TECHNOLOGY EDUCATION": {
+      "Exploring the Trades: CAD and Woods (Fall)": {
+        "Credits": 0.5,
+        "Grades": [9],
+        "Prerequisites": [],
+        "Fee": 10,
+        "isLaude": false,
+        "Description": "Exploring the Trades: CAD and Woods is a 0.5-credit course available to 9th-grade students in the fall. This course introduces students to computer-aided design (CAD) and woodworking. There is a $10 fee for this course. Students can take any combination of the three Exploring the Trades courses."
+      },
+      "Exploring the Trades: Woods and Metals (Winter)": {
+        "Credits": 0.5,
+        "Grades": [9],
+        "Prerequisites": [],
+        "Fee": 10,
+        "isLaude": false,
+        "Description": "Exploring the Trades: Woods and Metals is a 0.5-credit course available to 9th-grade students in the winter. This course covers woodworking and metalworking. A $10 fee is associated with this course. Students have the flexibility to take any combination of the three Exploring the Trades courses."
+      },
+      "Exploring the Trades: Metals and Engineering (Spring)": {
+        "Credits": 0.5,
+        "Grades": [9],
+        "Prerequisites": [],
+        "Fee": 10,
+        "isLaude": false,
+        "Description": "Exploring the Trades: Metals and Engineering is a 0.5-credit course offered to 9th-grade students in the spring. This course provides an introduction to metals and engineering. A $10 fee is required. Students can choose any combination of the three Exploring the Trades courses."
+      },
+      "Home and Auto Maintenance": {
+        "Credits": 0.5,
+        "Grades": [9, 10, 11, 12],
+        "Prerequisites": [],
+        "isLaude": false,
+        "Description": "Home and Auto Maintenance is a 0.5-credit course open to students in grades 9-12. This course covers essential maintenance tasks for homes and automobiles."
+      },
+      "Engines I": {
+        "Credits": 0.5,
+        "Grades": [10, 11, 12],
+        "Prerequisites": [],
+        "isLaude": false,
+        "Description": "Engines I is a 0.5-credit course available to students in grades 10-12. It covers the fundamentals of engines."
+      },
+      "Engines II": {
+        "Credits": 0.5,
+        "Grades": [10, 11, 12],
+        "Prerequisites": ["Engines I"],
+        "isLaude": false,
+        "Description": "Engines II is a 0.5-credit course open to students in grades 10-12. Prerequisite: Engines I."
+      },
+      "Introduction to Furniture Making": {
+        "Credits": 0.5,
+        "Grades": [10, 11, 12],
+        "Prerequisites": [],
+        "isLaude": false,
+        "Description": "Introduction to Furniture Making is a 0.5-credit course available to students in grades 10-12. Students will have to pay for the materials used in the construction of their projects."
+      },
+      "Introduction to Cabinet Making": {
+        "Credits": 0.5,
+        "Grades": [10, 11, 12],
+        "Prerequisites": [],
+        "isLaude": false,
+        "Description": "Introduction to Cabinet Making is a 0.5-credit course open to students in grades 10-12. Students will have to pay for the materials used in the construction of their projects."
+      },
+      "Introduction to Construction: Framing Floors, Walls, and Roofs": {
+        "Credits": 0.5,
+        "Grades": [10, 11, 12],
+        "Prerequisites": [],
+        "isLaude": false,
+        "Description": "Introduction to Construction: Framing Floors, Walls, and Roofs is a 0.5-credit course open to students in grades 10-12. Students will have to pay for the materials used in the construction of their projects."
+      },
+      "Introduction to Construction: Exterior and Interior Finishing": {
+        "Credits": 0.5,
+        "Grades": [10, 11, 12],
+        "Prerequisites": [],
+        "isLaude": false,
+        "Description": "Introduction to Construction: Exterior and Interior Finishing is a 0.5-credit course open to students in grades 10-12. Students will have to pay for the materials used in the construction of their projects."
+      },
+      "Metals I": {
+        "Credits": 0.5,
+        "Grades": [10, 11, 12],
+        "Prerequisites": [],
+        "isLaude": false,
+        "Description": "Metals I is a 0.5-credit course open to students in grades 10-12. Fees may be required to purchase materials for projects."
+      },
+      "Metals II": {
+        "Credits": 0.5,
+        "Grades": [10, 11, 12],
+        "Prerequisites": ["Metals I"],
+        "isLaude": false,
+        "Description": "Metals II is a 0.5-credit course available to students in grades 10-12. Prerequisite: Metals I. Fees may be required to purchase materials for projects."
+      },
+      "Furniture and Cabinet Making": {
+        "Credits": 1,
+        "Grades": [11, 12],
+        "Prerequisites": [
+          "Introduction to Furniture Making",
+          "Introduction to Cabinet Making",
+          "Instructor Consent"
+        ],
+        "isLaude": false,
+        "Description": "Furniture and Cabinet Making is a 1-credit course open to students in grades 11-12. Prerequisites include Introduction to Furniture Making, Introduction to Cabinet Making, or Instructor Consent."
+      },
+      "Construction Trades I (2-hrs)": {
+        "Credits": 2,
+        "Grades": [11, 12],
+        "Prerequisites": [
+          "Introduction to Construction: Framing Floors, Walls, and Roofs AND Introduction to Construction: Exterior and Interior Finishing (both are formerly Introduction to Construction)",
+          "Instructor Consent"
+        ],
+        "isLaude": false,
+        "Description": "Construction Trades I is a 2-credit course available to students in grades 11-12. Prerequisites include Introduction to Construction: Framing Floors, Walls, and Roofs AND Introduction to Construction: Exterior and Interior Finishing (both are formerly Introduction to Construction) or Instructor Consent."
+      },
+      "Construction Trades II  (2-hrs)": {
+        "Credits": 2,
+        "Grades": [11, 12],
+        "Prerequisites": [
+          "Introduction to Construction: Framing Floors, Walls, and Roofs AND Introduction to Construction: Exterior and Interior Finishing (both are formerly Introduction to Construction)",
+          "Instructor Consent"
+        ],
+        "isLaude": false,
+        "Description": "Construction Trades II is a 2-credit course open to students in grades 11-12. Prerequisites include Introduction to Construction: Framing Floors, Walls, and Roofs AND Introduction to Construction: Exterior and Interior Finishing (both are formerly Introduction to Construction) or Instructor Consent."
+      },
+      "Engines Troubleshooting": {
+        "Credits": 0.5,
+        "Grades": [11, 12],
+        "Prerequisites": ["Engines I"],
+        "isLaude": false,
+        "Description": "Engines Troubleshooting is a 0.5-credit course available to students in grades 11-12. Prerequisite: Engines I."
+      },
+      "Engines Restoration": {
+        "Credits": 0.5,
+        "Grades": [11, 12],
+        "Prerequisites": ["Engines I"],
+        "isLaude": false,
+        "Description": "Engines Restoration is a 0.5-credit course open to students in grades 11-12. Prerequisite: Engines I."
+      },
+      "Metals III": {
+        "Credits": 0.5,
+        "Grades": [11, 12],
+        "Prerequisites": ["Metals II"],
+        "isLaude": false,
+        "Description": "Metals III is a 0.5-credit course available to students in grades 11-12. Prerequisite: Metals II. Fees may be required to purchase materials for projects."
+      },
+      "Metals Fabrication": {
+        "Credits": 0.5,
+        "Grades": [11, 12],
+        "Prerequisites": ["Metals II"],
+        "isLaude": false,
+        "Description": "Metals Fabrication is a 0.5-credit course open to students in grades 11-12. Prerequisite: Metals II. Fees may be required to purchase materials for projects."
+      },
+      "Gas Metal Arc Welding (TC)  (2-Hrs)": {
+        "Credits": 2,
+        "Grades": [12],
+        "Prerequisites": [
+          "Metals III",
+          "Metals Fabrication",
+          "Instructor Consent"
+        ],
+        "isLaude": false,
+        "Description": "Gas Metal Arc Welding (TC)  (2-Hrs) is a 2-credit course available to 12th-grade students. Prerequisites include Metals III, Metals Fabrication, or Instructor Consent."
+      },
+      "Metals Independent Study": {
+        "Credits": 0.5,
+        "Grades": [12],
+        "Prerequisites": ["Instructor Consent"],
+        "isLaude": false,
+        "Description": "Metals Independent Study is a 0.5-credit course offered to 12th-grade students. Instructor Consent is required."
+      }
+    },
+    "TUTORING": {
+      "Tutor at Northside": {
+        "Credits": 0.5,
+        "Grades": [11, 12],
+        "Prerequisites": "Counselor Approval, Strong Attendance",
+        "Description": "Tutor at Northside is a 0.5-credit course available to 11th and 12th-grade students. Prerequisites include Counselor Approval and a strong attendance record."
+      },
+      "Special Education Tutor": {
+        "Credits": 0.5,
+        "Grades": [11, 12],
+        "Prerequisites": "Teacher Recommendation Only",
+        "Description": "Special Education Tutor is a 0.5-credit course open to 11th and 12th-grade students. Prerequisite: Teacher Recommendation Only."
+      },
+      "Peer Tutor/Mentor for Support For Success ": {
+        "Credits": 0.5,
+        "Grades": [11, 12],
+        "Prerequisites": "Counselor Approval, Strong Attendance",
+        "Description": "Peer Tutor/Mentor for Support For Success  is a 0.5-credit course available to 11th and 12th-grade students. Prerequisites include Counselor Approval and a strong attendance record."
+      }
+    },
+    "WORLD LANGUAGE": {
+      "French III (online only)": {
+        "Credits": 1,
+        "Grades": [10, 11, 12],
+        "Prerequisites": "C- in 2nd trimester French II or instructor consent",
+        "Description": "French III (online only) is a 1-credit course open to students in grades 10-12. Prerequisite: C- in 2nd trimester French II or instructor consent."
+      },
+      "Honors French III  (online only)": {
+        "Credits": 1,
+        "Grades": [10, 11, 12],
+        "Prerequisites": "B- in 2nd trimester French II or instructor consent",
+        "Description": "Honors French III  (online only) is a 1-credit course available to students in grades 10-12. Prerequisite: B- in 2nd trimester French II or instructor consent."
+      },
+      "French IV (online only)": {
+        "Credits": 1,
+        "Grades": [11, 12],
+        "Prerequisites": "C- in 2nd trimester French III or instructor consent",
+        "Description": "French IV (online only) is a 1-credit course open to students in grades 11-12. Prerequisite: C- in 2nd trimester French III or instructor consent."
+      },
+      "AP French Language and Culture  (online only)": {
+        "Credits": 1,
+        "Grades": [11, 12],
+        "Prerequisites": "B- in 2nd trimester Honors French III or instructor consent",
+        "Description": "AP French Language and Culture  (online only) is a 1-credit course available to students in grades 11-12. Prerequisite: B- in 2nd trimester Honors French III or instructor consent."
+      },
+      "Spanish in the Medical Field": {
+        "Credits": 0.5,
+        "Grades": [10, 11, 12],
+        "Prerequisites": "C- in 2nd trimester of Spanish II",
+        "Description": "Spanish in the Medical Field is a 0.5-credit course open to students in grades 10-12. Prerequisite: C- in 2nd trimester of Spanish II."
+      },
+      "Spanish I": {
+        "Credits": 1,
+        "Grades": [9, 10, 11, 12],
+        "Prerequisites": "C- or better in previous year English/Language class strongly recommended",
+        "Description": "Spanish I is a 1-credit course available to students in grades 9-12. It is strongly recommended to have a C- or better in the previous year's English/Language class."
+      },
+      "Spanish II": {
+        "Credits": 1,
+        "Grades": [9, 10, 11, 12],
+        "Prerequisites": "C- in 2nd trimester of Spanish I",
+        "Description": "Spanish II is a 1-credit course open to students in grades 9-12. Prerequisite: C- in 2nd trimester of Spanish I."
+      },
+      "Spanish III": {
+        "Credits": 1,
+        "Grades": [10, 11, 12],
+        "Prerequisites": "C- in 2nd trimester of Spanish II",
+        "Description": "Spanish III is a 1-credit course available to students in grades 10-12. Prerequisite: C- in 2nd trimester of Spanish II."
+      },
+      "Advanced Spanish Foundations  (REQUIRED for AP Spanish)": {
+        "Credits": 1,
+        "Grades": [11, 12],
+        "Prerequisites": "B- in 2nd trimester Spanish II or instructor consent",
+        "Description": "Advanced Spanish Foundations  is a 1-credit course required for AP Spanish and available to students in grades 11-12. Prerequisite: B- in 2nd trimester Spanish II or instructor consent."
+      },
+      "Spanish IV": {
+        "Credits": 1,
+        "Grades": [11, 12],
+        "Prerequisites": "C- in 2nd trimester Spanish III or instructor consent",
+        "Description": "Spanish IV is a 1-credit course open to students in grades 11-12. Prerequisite: C- in 2nd trimester Spanish III or instructor consent."
+      },
+      "AP Spanish Language and Culture ": {
+        "Credits": 1,
+        "Grades": [12],
+        "Prerequisites": "B- in 2nd trimester of Advanced Spanish Foundations or instructor consent",
+        "Description": "AP Spanish Language and Culture  is a 1-credit course available to 12th-grade students. Prerequisite: B- in 2nd trimester of Advanced Spanish Foundations or instructor consent."
+      }
+    }
+  }
+}
