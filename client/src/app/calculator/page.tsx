@@ -41,7 +41,7 @@ const extractLaudePoints = async (file: ExtFile) => {
 
   try {
     const pdfResponse = await axios.post(
-      "mhslaude-backend-9bcclcfds-kooperlols-projects.vercel.app/pdf/extract-text",
+      "https://mhslaude-backend.vercel.app/pdf/extract-text",
       pdfFormData
     );
 
