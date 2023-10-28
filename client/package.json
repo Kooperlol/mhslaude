@@ -2,12 +2,13 @@
   "name": "mhs-laude",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://limitless-tundra-15533-8729f6bdecaf.herokuapp.com",
+  "proxy": "https://limitless-tundra-15533-8729f6bdecaf.herokuapp.com:8080",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
     "start": "next start -p $PORT",
-    "lint": "next lint"
+    "heroku-postbuild": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.1",
