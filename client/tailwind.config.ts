@@ -2,15 +2,15 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
     fontFamily: {
-      bravaslabs: ['var(--font-brava-slab)'],
-      octinsports: ['var(--font-octin-sports)']
+      bravaslabs: ["var(--font-brava-slab)"],
+      octinsports: ["var(--font-octin-sports)"],
     },
     container: {
       center: true,
@@ -77,4 +77,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
