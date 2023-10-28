@@ -2,11 +2,11 @@
   "name": "mhs-laude",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://limitless-tundra-15533-8729f6bdecaf.herokuapp.com:8080",
+  "proxy": "https://limitless-crag-57194-08aa1fb96407.herokuapp.com:8080",
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start -p $PORT",
+    "start": "next start -p $PORT --host 0.0.0.0",
     "heroku-postbuild": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
