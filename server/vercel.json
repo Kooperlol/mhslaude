@@ -1,3 +1,11 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/app" }]
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.py",
+      "use": "@now/python",
+      "config": { "maxLambdaSize": "50mb" }
+    }
+  ],
+  "routes": [{ "handle": "filesystem" }, { "src": "/(.*)", "dest": "app.py" }]
 }
