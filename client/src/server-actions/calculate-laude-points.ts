@@ -1,4 +1,4 @@
-import laudePointData from "@/laude-points.json";
+import laudePointData from "../laude-points.json";
 
 export default function calculateLaudePoints(transcript: string) {
   let points = 0;

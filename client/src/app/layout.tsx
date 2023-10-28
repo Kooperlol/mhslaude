@@ -1,10 +1,10 @@
-import Footer from "@/components/shared/footer";
-import ProvidersWrapper from "@/providers/providers-wrapper";
+import Footer from "../components/shared/footer";
+import ProvidersWrapper from "../providers/providers-wrapper";
 import "./globals.css";
 import type { Metadata } from "next";
 import { ChakraProvider } from "@chakra-ui/react";
 import localFont from "next/font/local";
-import Header from "@/components/shared/header";
+import Header from "../components/shared/header";
 
 // Octin Sports Font
 const bravaSlab = localFont({

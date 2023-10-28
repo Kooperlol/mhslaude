@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { Laude, toLatin } from "@/enums/laude-enum";
+import { Laude, toLatin } from "../../enums/laude-enum";
 import { motion } from "framer-motion";
 
 export default function LaudeCard(laude: Laude) {
