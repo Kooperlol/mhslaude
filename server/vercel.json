@@ -3,8 +3,7 @@
   "builds": [
     {
       "src": "/*.py",
-      "use": "@now/python",
-      "config": { "maxLambdaSize": "50mb" }
+      "use": "@now/python"
     }
   ],
   "routes": [{ "handle": "filesystem" }, { "src": "/(.*)", "dest": "app.py" }]
