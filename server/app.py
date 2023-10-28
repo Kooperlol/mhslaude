@@ -7,5 +7,9 @@ CORS(app)
 
 app.register_blueprint(pdf_bp, url_prefix='/pdf') 
 
+@app.route('/')
+def homepage():
+    return "Welcome to the homepage"
+
 if __name__ == "__main__":
-    app.run(debug=True, port=8080)
+    app.run(debug=True)
