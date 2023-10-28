@@ -2,6 +2,7 @@
   "name": "mhs-laude",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://limitless-tundra-15533-8729f6bdecaf.herokuapp.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
