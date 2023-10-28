@@ -1,2 +1,2 @@
 web: gunicorn app:app --chdir server
-web: npm install && cd client && npm run heroku-postbuild
+web: cd client && npm install && npm run heroku-postbuild
