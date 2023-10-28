@@ -2,7 +2,6 @@
   "name": "mhs-laude",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://limitless-crag-57194-08aa1fb96407.herokuapp.com:8080",
   "scripts": {
     "dev": "next",
     "build": "next build",
