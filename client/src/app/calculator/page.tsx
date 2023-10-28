@@ -41,7 +41,7 @@ const extractLaudePoints = async (file: ExtFile) => {
 
   try {
     const pdfResponse = await axios.post(
-      "http://localhost:5000/pdf/extract-text",
+      "http://localhost:8080/pdf/extract-text",
       pdfFormData
     );
 

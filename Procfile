@@ -1,1 +1,1 @@
-web: gunicorn app:app --chdir server/venv
+web: gunicorn app:app --chdir /server/

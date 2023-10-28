@@ -8,4 +8,4 @@ CORS(app)
 app.register_blueprint(pdf_bp, url_prefix='/pdf') 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=8080)
