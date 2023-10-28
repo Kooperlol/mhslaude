@@ -1,9 +1,9 @@
 "use client";
-import LaudeCard from "@/components/home/laude-card";
-import { Button } from "@/components/shared/button";
+import LaudeCard from "../components/home/laude-card";
+import { Button } from "../components/shared/button";
 import Link from "next/link";
 import Image from "next/image";
-import { Laude } from "@/enums/laude-enum";
+import { Laude } from "../enums/laude-enum";
 
 export default function Home() {
   return (

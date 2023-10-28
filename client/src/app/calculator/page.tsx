@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Dropzone, ExtFile } from "@dropzone-ui/react";
-import calculateLaudePoints from "@/server-actions/calculate-laude-points";
-import { Button } from "@/components/shared/button";
+import calculateLaudePoints from "../../server-actions/calculate-laude-points";
+import { Button } from "../../components/shared/button";
 import {
   Box,
   Card,
