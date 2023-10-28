@@ -77,4 +77,7 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
+  experimental: {
+    esmExternals: false,
+  },
 };
