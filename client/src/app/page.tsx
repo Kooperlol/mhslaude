@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <>
       {/* Calculate Laude Points */}
-      <div className="flex md:flex-row flex-col h-screen md:text-left text-center justify-between px-16 py-20">
-        <div className="flex flex-col object-left gap-8 md:w-1/4">
-          <p className="font-octinsports md:text-6xl text-4xl">
+      <div className="flex md:flex-row flex-col min-h-screen gap-14 md:text-left text-center items-center md:justify-between px-16 py-20">
+        <div className="flex flex-col object-left gap-3 md:w-1/4">
+          <p className="font-octinsports md:text-5xl text-3xl">
             calculate your laude points
           </p>
           <div className="flex-col flex gap-5">
-            <p className="font-bravaslab md:text-3xl text-2xl">
+            <p className="font-bravaslab md:text-3xl text-xl">
               No more tedious calculations! Simply upload your transcript and
               instantly get results.
             </p>
@@ -27,7 +27,7 @@ export default function Home() {
           </div>
         </div>
         <Image
-          className="w-fit md:py-64 select-none"
+          className="md:w-1/4 w-1/2 select-none"
           priority
           draggable={false}
           src="/media/calculator_person.svg"
@@ -39,7 +39,9 @@ export default function Home() {
 
       {/* Graduation Tiers */}
       <div className="bg-secondary h-1/6 py-5 flex flex-col gap-4 items-center">
-        <p className="font-octinsports text-white text-5xl">graduation tiers</p>
+        <p className="font-octinsports text-center text-white text-5xl">
+          graduation tiers
+        </p>
         <hr className="bg-white md:w-1/3 w-2/3 border-2 rounded-lg dark:black" />
         <div className="flex md:flex-row flex-col md:gap-20 gap-8 py-5">
           {Object.keys(Laude)
@@ -51,13 +53,13 @@ export default function Home() {
       </div>
 
       {/* Transcript Feedback */}
-      <div className="flex md:flex-row h-screen flex-col justify-between md:text-left text-center px-16 py-20">
-        <div className="flex flex-col object-left gap-8 md:w-1/4">
-          <p className="font-octinsports md:text-6xl text-4xl">
+      <div className="flex md:flex-row min-h-screen items-center flex-col gap-14 md:justify-between md:text-left text-center px-16 py-20">
+        <div className="flex flex-col object-left gap-3 md:w-1/4">
+          <p className="font-octinsports md:text-5xl text-3xl">
             get feedback from your transcript
           </p>
           <div className="flex-col flex gap-5">
-            <p className="font-bravaslab md:text-3xl text-2xl">
+            <p className="font-bravaslab md:text-3xl text-xl">
               Get personalized feedback from uploading your transcript! Our
               technology can recommend classes to boost your laude points.
             </p>
@@ -69,7 +71,7 @@ export default function Home() {
           </div>
         </div>
         <Image
-          className="w-fit md:py-64 select-none"
+          className="md:w-1/4 w-1/2 select-none"
           priority
           src="/media/file_person.svg"
           draggable={false}
@@ -81,7 +83,7 @@ export default function Home() {
 
       {/* Tutorial */}
       <div className="bg-primary flex flex-col gap-5 items-center py-10">
-        <p className="font-octinsports text-center text-5xl text-white">
+        <p className="font-octinsports text-center md:text-5xl text-3xl text-white">
           learn how to get feedback now!
         </p>
         <Button asChild variant="secondary" size="xlg">

@@ -236,7 +236,7 @@ export default function Calculator() {
   });
 
   return (
-    <div className="flex flex-col justify-center px-10 py-32 gap-10 h-screen">
+    <div className="flex flex-col justify-center px-10 py-32 gap-10 h-screen-min">
       <div className="md:text-center text-left">
         <p className="font-octinsports md:text-6xl text-4xl">
           calculate your laude points
