@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "*.py",
-      "use": "@now/python"
+      "use": "@vercel/python"
     }
   ],
   "routes": [{ "handle": "filesystem" }, { "src": "/(.*)", "dest": "app.py" }]
