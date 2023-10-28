@@ -5,8 +5,8 @@
   "proxy": "https://limitless-crag-57194-08aa1fb96407.herokuapp.com:8080",
   "scripts": {
     "dev": "next",
-    "build": "next build --max_old_space_size=2560",
-    "start": "next start -p $PORT --host 0.0.0.0 --max_old_space_size=2560",
+    "build": "next build",
+    "start": "next start -p $PORT --host 0.0.0.0",
     "heroku-postbuild": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
