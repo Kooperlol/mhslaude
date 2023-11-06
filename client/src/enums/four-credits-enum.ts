@@ -2,10 +2,10 @@ export enum FOUR_CREDITS {
   ART = "art",
   BUSINESS = "business",
   AGRICULTURE = "agriculture science",
-  COMPUTER = "computer science and digital techonology",
+  COMPUTER = "computer science and digital technology",
   BAND = "band",
   CHOIR = "choir",
-  TECHONOLOGY = "techonology and engineering",
+  TECHNOLOGY = "technology and engineering",
   LANGUAGE = "world language",
 }
 
@@ -23,7 +23,7 @@ export function getSubjectClasses(course: FOUR_CREDITS): string {
       return `AP Music Theory, Chamber Ensemble, Symphonic Band, and Wind Ensemble`;
     case FOUR_CREDITS.CHOIR:
       return `Women’s Show Choir (Octave Above), Mixed Concert Choir, Mixed Show Choir (Choralation), and Chamber Choir`;
-    case FOUR_CREDITS.TECHONOLOGY:
+    case FOUR_CREDITS.TECHNOLOGY:
       return `Introduction to Engineering Design (PLTW), Principles of Engineering (PLTW), AP Computer Science Principles, Exploring the Trades: CAD and Woods (Fall), Exploring the Trades: Woods and Metals (Winter), Exploring the Trades: Metals and Engineering (Spring), Home and Auto Maintenance, Engines I, Engines II, Introduction to Furniture Making, Introduction to Cabinet Making, Introduction to Construction: Framing Floors, Walls, and Roofs, Introduction to Construction: Exterior and Interior Finishing, Metals I, Metals II, Furniture and Cabinet Making, Construction Trades I (2-hrs), Construction Trades II  (2-hrs), Engines Troubleshooting, Engines Restoration, Metals III, Metals Fabrication, and Gas Metal Arc Welding (TC)  (2-Hrs), Metals Independent Study`;
     case FOUR_CREDITS.LANGUAGE:
       return `French III, Honors French III, French IV, AP French Language and Culture, Spanish in the Medical Field, Spanish I, Spanish II, Spanish III, Advanced Spanish Foundations, Spanish IV, and AP Spanish Language and Culture`;

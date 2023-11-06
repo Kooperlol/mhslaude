@@ -28,7 +28,9 @@ export default function About() {
               At Milton High School, Laude Points are used to recognize and
               reward students who have excelled academically and met specific
               criteria, including a combination of GPA (Grade Point Average),
-              course credits, and additional achievements.
+              course credits, and additional achievements. To determine laude
+              recognition, the student's GPA is multipled by their Laude Points
+              to get their Laude Score.
             </p>
           </div>
           <br />
@@ -51,10 +53,9 @@ export default function About() {
             academic achievement.
           </p>
           <p>
-            <u>Course Credits:</u> Many Laude systems require students to
-            complete a certain number of advanced courses, honors classes, or
-            other academically challenging programs. These credits contribute to
-            their Laude Points.
+            <u>Course Credits:</u> Laude recognition requires students to take
+            advanced courses, honors classes, or other academically challenging
+            programs. These credits contribute to their Laude Points.
           </p>
           <p>
             <u>Additional Achievements:</u> Beyond academics, students may
@@ -73,7 +74,7 @@ export default function About() {
               <div className="flex text-center flex-col gap-5" key={l}>
                 {LaudeCard(LAUDE[l as keyof typeof LAUDE], false)}
                 <p>{LAUDE[l as keyof typeof LAUDE]}</p>
-                <p>{toPoints(LAUDE[l as keyof typeof LAUDE])} Laude Points</p>
+                <p>{toPoints(LAUDE[l as keyof typeof LAUDE])} Laude Score</p>
               </div>
             ))}
         </div>

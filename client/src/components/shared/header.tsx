@@ -25,7 +25,7 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="font-bravaslabs relative left-0 top-0 z-50 ease-in duration-300">
+    <div className="font-bravaslabs absolute left-0 top-0 z-50 ease-in duration-300">
       <div
         className={`m-auto flex w-screen justify-between items-center px-8 py-5 text-white ${
           scrollPosition > 0

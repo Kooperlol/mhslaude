@@ -19,7 +19,7 @@ export default function Tutorial() {
 `;
 
   return (
-    <div className="flex p-20 flex-col gap-10">
+    <div className="flex px-20 py-32 flex-col gap-10">
       <GlobalStyles />
       <div>
         <h1>Step 1: Introduction</h1>

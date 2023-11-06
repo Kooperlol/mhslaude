@@ -217,6 +217,11 @@ export default function Calculator() {
       label: "4 Credits",
       component: (
         <div className="flex flex-col gap-8 font-bravaslabs">
+          <p>
+            <u>Note:</u> Most classes are worth 0.5 credits. Make sure to double
+            check the credits on your transcript! You can hover over each field
+            to see the classes that count.
+          </p>
           {Object.values(FOUR_CREDITS).map((subject) => (
             <Tooltip
               key={subject}
