@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Laude Calculator Summary</title>
+    <style>
+      body {
+        font-family: "Roboto";
+      }
+      h1 {
+        color: #470100;
+        font-size: 32px;
+      }
+      h2 {
+        color: #9f302f;
+        font-size: 24px;
+      }
+      p {
+        font-size: 18px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      th {
+        background-color: #f2f2f2;
+        border: 1px solid #ddd;
+        padding: 8px;
+        font-size: xx-large;
+        text-align: left;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      tr:nth-child(odd) {
+        background-color: #ffffff;
+      }
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        font-size: x-large;
+        text-align: left;
+      }
+      .table-container {
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <img src="images/logo.png" alt="MHS Laude Logo" width="450" />
+      <h2>Student: {{ student.name }}</h2>
+      <h2>Date: {{ current_date }}</h2>
+    </center>
+    <br />
+    <div>
+      <h1>Summary</h1>
+      <p>Laude Status: {{ student.status }}</p>
+      <p>Laude Points: {{ student.points }}</p>
+      <p>Grade Point Average: {{ student.gpa }}</p>
+    </div>
+    <br />
+    <div>
+      {% if student.fourCredits|length > 0 %}
+      <h1>Four Credits of a Subject</h1>
+      {% for subject in student.fourCredits %}
+      <p>{{ subject|capitalize }}</p>
+      {% endfor %} {% endif %}
+    </div>
+    <br />
+    <div>
+      {% if student.other|length > 0 %}
+      <h1>Other</h1>
+      {% for thing in student.other %}
+      <p>{{ thing|capitalize }}</p>
+      {% endfor %} {% endif %}
+    </div>
+    <br />
+    <div>
+      {% if student.startNow > 0 %}
+      <h1>Start College Now Program</h1>
+      <p>Points: {{ student.startNow }}</p>
+      {% endif %}
+    </div>
+    <br />
+    <div>
+      {% if student.additionalPoints > 0 %}
+      <h1>Additional Points</h1>
+      <p>Points: {{ student.additionalPoints }}</p>
+      {% endif %}
+    </div>
+    <br />
+    <div lass="table-container">
+      <h1>Weighted Classes</h1>
+      <table class="styled-table" border="0.1">
+        <tr>
+          <th>Class</th>
+          <th>Points</th>
+        </tr>
+        {% for class in classes %}
+        <tr>
+          <td>{{ class.name }}</td>
+          <td>{{ class.points }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </body>
+</html>

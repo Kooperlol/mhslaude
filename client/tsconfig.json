@@ -35,7 +35,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "build/types/**/*.ts"
-  ],
+, "src/components/calculator/confetti.jsx"  ],
   "exclude": [
     "node_modules"
   ]

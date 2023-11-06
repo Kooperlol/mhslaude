@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { Laude, toLatin } from "../../enums/laude-enum";
+import { LAUDE, toLatin } from "../../enums/laude-enum";
 import { motion } from "framer-motion";
 
-export default function LaudeCard(laude: Laude) {
+export default function LaudeCard(laude: LAUDE, isText: boolean) {
   return (
     <motion.div
       className="flex flex-col gap-2 text-white font-bravaslab items-center text-center"
@@ -13,7 +13,7 @@ export default function LaudeCard(laude: Laude) {
       transition={{ duration: 0.5 }}
       whileHover={{ scale: 1.05 }}
     >
-      <p className="text-xl font-bold select-none">{laude}</p>
+      {isText && <p className="text-xl font-bold select-none">{laude}</p>}
       <Image
         priority
         draggable={false}
@@ -22,7 +22,7 @@ export default function LaudeCard(laude: Laude) {
         width={150}
         height={150}
       />
-      <p className="italic">{toLatin(laude)}</p>
+      {isText && <p className="italic">{toLatin(laude)}</p>}
     </motion.div>
   );
 }

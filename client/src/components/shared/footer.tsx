@@ -63,7 +63,9 @@ export default function Footer() {
         <BsTwitter
           size={25}
           className="hover:text-primary"
-          onClick={() => window.open("https://www.milton.k12.wi.us/", "_blank")}
+          onClick={() =>
+            window.open("https://twitter.com/SchDistofMilton", "_blank")
+          }
         />
         <BsInstagram
           size={25}
