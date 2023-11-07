@@ -30,7 +30,7 @@ export default function Header() {
         className={`m-auto flex w-screen justify-between items-center px-8 py-5 text-white ${
           scrollPosition > 0
             ? "fixed drop-shadow-md bg-background"
-            : "shadow-none"
+            : "fixed shadow-none"
         }`}
       >
         <Link href="/">
