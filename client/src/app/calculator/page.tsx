@@ -119,6 +119,20 @@ export default function Calculator() {
     });
   const toggleConfetti = () =>
     dispatch({ type: REDUCER_ACTION_TYPE.TOGGLE_CONFEETTI });
+  const toggleCreditClasses = (subject: string) => {
+    if (creditClasses.includes(subject)) {
+      setCreditClasses(creditClasses.filter((item) => item != subject));
+    } else {
+      setCreditClasses([...creditClasses, subject]);
+    }
+  };
+  const toggleOtherReasons = (reason: string) => {
+    if (otherReasons.includes(reason)) {
+      setOtherReasons(otherReasons.filter((item) => item != reason));
+    } else {
+      setOtherReasons([...otherReasons, reason]);
+    }
+  };
 
   // Reads the transcript pdf and returns extracted data
   const readTranscript = async (file: ExtFile) => {
@@ -239,7 +253,7 @@ export default function Calculator() {
                     value == "yes"
                       ? incrementLaudePoints()
                       : decrementLaudePoints();
-                    setCreditClasses([...creditClasses, subject]);
+                    toggleCreditClasses(subject);
                   }}
                 >
                   <p>Do you have 4 credits of {subject}?</p>
@@ -307,7 +321,7 @@ export default function Calculator() {
             defaultValue="no"
             onChange={(value) => {
               value == "yes" ? incrementLaudePoints() : decrementLaudePoints();
-              setOtherReasons([...otherReasons, "GSP Qualifier"]);
+              toggleOtherReasons("GSP Qualifier");
             }}
           >
             <p>Are you a Global Scholars Program (GSP) qualifier?</p>
@@ -321,10 +335,7 @@ export default function Calculator() {
             defaultValue="no"
             onChange={(value) => {
               value == "yes" ? incrementLaudePoints() : decrementLaudePoints();
-              setOtherReasons([
-                ...otherReasons,
-                "Youth Apprentinceship Level 2",
-              ]);
+              toggleOtherReasons("Youth Apprentinceship Level 2");
             }}
           >
             <p>Have you completed Youth Apprenticeship Level 2 (NOT CO-OP)?</p>
@@ -338,10 +349,7 @@ export default function Calculator() {
             defaultValue="no"
             onChange={(value) => {
               value == "yes" ? incrementLaudePoints() : decrementLaudePoints();
-              setOtherReasons([
-                ...otherReasons,
-                "Early College Credit Program",
-              ]);
+              toggleOtherReasons("Early College Credit Program");
             }}
           >
             <p>Have you enrolled in the Early College Credit Program?</p>
