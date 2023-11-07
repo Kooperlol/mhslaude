@@ -76,11 +76,6 @@ export default function Header() {
           style={{
             overflow: nav ? "hidden" : "auto",
           }}
-          onWheel={(e) => {
-            if (nav) {
-              e.preventDefault();
-            }
-          }}
         >
           <ul>
             <li onClick={handleNav} className="p-4 text-4xl hover:text-primary">

@@ -162,7 +162,10 @@ export default function Calculator() {
           student: [
             {
               name: state.studentName,
-              points: state.laudePoints.toFixed(2),
+              points: (
+                state.laudePoints / Number.parseFloat(state.gpaValue)
+              ).toFixed(2),
+              score: state.laudePoints.toFixed(2),
               status: fromPoints(state.laudePoints),
               gpa: state.gpaValue,
               classes: state.laudeClasses,
@@ -423,22 +426,27 @@ export default function Calculator() {
               with honors.
             </p>
           )}
-          {Number.parseFloat(state.gpaValue) >= 3 && (
-            <div className="flex flex-col items-center">
-              <div className="flex font-bravaslabs flex-row gap-3 text-left items-center justify-between">
-                <div>
-                  <p className="text-5xl">Congratulations!</p>
-                  <p className="text-3xl">
-                    You're graduating with {fromPoints(state.laudePoints)}
-                  </p>
+          {Number.parseFloat(state.gpaValue) >= 3 &&
+            fromPoints(state.laudePoints) == null && (
+              <p>Sorry, but you do not qualify for any honors.</p>
+            )}
+          {Number.parseFloat(state.gpaValue) >= 3 &&
+            fromPoints(state.laudePoints) != null && (
+              <div className="flex flex-col items-center">
+                <div className="flex font-bravaslabs flex-row gap-3 text-left items-center justify-between">
+                  <div>
+                    <p className="text-5xl">Congratulations!</p>
+                    <p className="text-3xl">
+                      You're graduating with {fromPoints(state.laudePoints)}
+                    </p>
+                  </div>
+                  {LaudeCard(fromPoints(state.laudePoints)!!, false)}
                 </div>
-                {LaudeCard(fromPoints(state.laudePoints), false)}
+                <Button onClick={() => downloadSummary()} variant="default">
+                  Download Summary
+                </Button>
               </div>
-              <Button onClick={() => downloadSummary()} variant="default">
-                Download Summary
-              </Button>
-            </div>
-          )}
+            )}
         </>
       ),
     },

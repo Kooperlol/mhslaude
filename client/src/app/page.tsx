@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       {/* Calculate Laude Points */}
-      <div className="flex md:flex-row flex-col min-h-screen gap-14 md:text-left text-center justify-center items-center md:justify-between px-16 py-20">
+      <div className="flex md:flex-row flex-col min-h-screen gap-14 md:text-left text-center justify-center items-center md:justify-between px-16 py-32">
         <div className="flex flex-col object-left gap-3 md:w-1/4">
           <p className="font-octinsports lg:text-5xl text-4xl">
             calculate your laude points

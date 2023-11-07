@@ -48,15 +48,16 @@
     </style>
   </head>
   <body>
-    <center>
+    <div style="text-align: center">
       <img src="images/logo.png" alt="MHS Laude Logo" width="450" />
       <h2>Student: {{ student.name }}</h2>
       <h2>Date: {{ current_date }}</h2>
-    </center>
+    </div>
     <br />
     <div>
       <h1>Summary</h1>
       <p>Laude Status: {{ student.status }}</p>
+      <p>Laude Score: {{ student.score }}</p>
       <p>Laude Points: {{ student.points }}</p>
       <p>Grade Point Average: {{ student.gpa }}</p>
     </div>
@@ -91,9 +92,9 @@
       {% endif %}
     </div>
     <br />
-    <div lass="table-container">
+    <div class="table-container">
       <h1>Weighted Classes</h1>
-      <table class="styled-table" border="0.1">
+      <table class="styled-table" border="0.1px">
         <tr>
           <th>Class</th>
           <th>Points</th>

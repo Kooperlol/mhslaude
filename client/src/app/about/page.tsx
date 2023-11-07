@@ -17,7 +17,7 @@ export default function About() {
   }
 `;
   return (
-    <div className="flex py-10 flex-col gap-16">
+    <div className="flex md:py-10 py-28 flex-col gap-16">
       <GlobalStyles />
       <div className="min-h-screen flex flex-col md:justify-evenly">
         <div className="px-20 flex md:flex-row flex-col md:justify-between">
