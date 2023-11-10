@@ -33,12 +33,14 @@ export function toPoints(laude: LAUDE): string {
 }
 
 export function fromPoints(points: number): LAUDE | null {
-  if (points >= 20 && points <= 39.999) {
-    return LAUDE.CUM_LAUDE;
-  } else if (points >= 40 && points <= 59.999) {
-    return LAUDE.MAGNA_CUM_LAUDE;
-  } else if (points >= 60) {
-    return LAUDE.SUMMA_CUM_LAUDE;
+  switch (true) {
+    case points >= 20 && points < 40:
+      return LAUDE.CUM_LAUDE;
+    case points >= 40 && points < 60:
+      return LAUDE.MAGNA_CUM_LAUDE;
+    case points >= 60:
+      return LAUDE.SUMMA_CUM_LAUDE;
+    default:
+      return null;
   }
-  return null;
 }
