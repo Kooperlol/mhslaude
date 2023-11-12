@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@dropzone-ui/react": "^7.0.4",
-    "uuid": "^9.0.1"
+    "@dropzone-ui/react": "^7.0.4"
   }
 }
