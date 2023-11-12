@@ -20,16 +20,18 @@ def calculate_laude_points():
 
     try:
         # Create a temporary file for PDF processing
-        with tempfile.NamedTemporaryFile(suffix='.pdf', delete=False) as temp_file:
-            temp_file.write(pdf_file.read())
+        tmp = tempfile.NamedTemporaryFile(suffix='.pdf', delete=False)
+        tmp.write(pdf_file.read())
 
         # Open the temporary PDF file with PyMuPDF
-        doc = fitz.open(temp_file.name)
+        doc = fitz.open(tmp.name)
         
         if (has_readable_text(doc)):
             text = extract_text(pdf_file)
         else:
-            text = perform_ocr(temp_file.name)
+            text = perform_ocr(tmp.name)
+            
+        tmp.close()
         
         if not text:
             return jsonify({'error': 'No text found'}), 400

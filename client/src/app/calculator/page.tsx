@@ -141,7 +141,7 @@ export default function Calculator() {
 
     try {
       const laudeResponse = await axios.post(
-        "https://mhslaude-backend.vercel.app/laude-points/calculate",
+        "http://localhost:5000/laude-points/calculate",
         transcriptFormData
       );
 
@@ -171,7 +171,7 @@ export default function Calculator() {
   const downloadSummary = async () => {
     try {
       const pdfResponse = await axios.post(
-        "https://mhslaude-backend.vercel.app/pdf/create-summary",
+        "http://localhost:5000/pdf/create-summary",
         {
           student: [
             {
