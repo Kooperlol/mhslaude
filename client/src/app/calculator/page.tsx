@@ -413,7 +413,10 @@ export default function Calculator() {
             onClick={() => {
               setActiveStep(3);
               addLaudePoints();
-              if (Number.parseFloat(state.gpaValue) >= 3) {
+              if (
+                Number.parseFloat(state.gpaValue) >= 3 &&
+                fromPoints(state.laudePoints) != null
+              ) {
                 toggleConfetti();
               }
             }}
