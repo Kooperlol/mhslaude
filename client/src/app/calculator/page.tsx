@@ -413,12 +413,6 @@ export default function Calculator() {
             onClick={() => {
               setActiveStep(3);
               addLaudePoints();
-              if (
-                Number.parseFloat(state.gpaValue) >= 3 &&
-                fromPoints(state.laudePoints) != null
-              ) {
-                toggleConfetti();
-              }
             }}
             size="lg"
           >
@@ -468,6 +462,16 @@ export default function Calculator() {
     index: 0,
     count: steps.length,
   });
+
+  useEffect(() => {
+    if (activeStep != 3) return;
+    if (
+      Number.parseFloat(state.gpaValue) >= 3 &&
+      fromPoints(state.laudePoints) != null
+    ) {
+      toggleConfetti();
+    }
+  }, [activeStep]);
 
   // Mobile viewport detection
   const [isMobile, setIsMobile] = useState(false);
