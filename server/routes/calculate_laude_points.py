@@ -87,7 +87,7 @@ def is_half_laude_class(line):
 def is_to_be_earned(segments):
     flag = False
     for segment in segments:
-        if segment.find('0.1') != -1:
+        if segment.find('0.') != -1:
             flag = True
         if segment == 'L' and flag == False:
             return True

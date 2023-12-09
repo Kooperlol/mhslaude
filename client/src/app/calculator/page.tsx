@@ -455,25 +455,36 @@ export default function Calculator() {
           )}
           {Number.parseFloat(state.gpaValue) >= 3 &&
             fromPoints(state.laudePoints) == null && (
-              <p>Sorry, but you do not qualify for any honors.</p>
+              <p>
+                Sorry, but you do not qualify for any honors. You need{" "}
+                {20 - state.laudePoints} more laude points to qualify for Cum
+                Laude.
+              </p>
             )}
           {Number.parseFloat(state.gpaValue) >= 3 &&
-            fromPoints(state.laudePoints) != null && (
-              <div className="flex flex-col items-center">
-                <div className="flex font-bravaslabs flex-row gap-3 text-left items-center justify-between">
-                  <div>
-                    <p className="text-5xl">Congratulations!</p>
-                    <p className="text-3xl">
-                      You're graduating with {fromPoints(state.laudePoints)}
-                    </p>
-                  </div>
-                  {LaudeCard(fromPoints(state.laudePoints)!!, false)}
-                </div>
-                <Button onClick={() => downloadSummary()} variant="default">
-                  Download Summary
-                </Button>
-              </div>
+            fromPoints(state.tbeLaudePoints) != null &&
+            fromPoints(state.laudePoints) == null && (
+              <p>
+                Note: If you continue and pass your current courses, you should
+                reach {fromPoints(state.tbeLaudePoints)} by the end of the year.
+              </p>
             )}
+          {fromPoints(state.laudePoints) != null && (
+            <div className="flex flex-col items-center">
+              <div className="flex font-bravaslabs flex-row gap-3 text-left items-center justify-between">
+                <div>
+                  <p className="text-5xl">Congratulations!</p>
+                  <p className="text-3xl">
+                    You're graduating with {fromPoints(state.laudePoints)}
+                  </p>
+                </div>
+                {LaudeCard(fromPoints(state.laudePoints)!!, false)}
+              </div>
+              <Button onClick={() => downloadSummary()} variant="default">
+                Download Summary
+              </Button>
+            </div>
+          )}
         </>
       ),
     },

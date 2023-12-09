@@ -10,7 +10,6 @@ env = Environment(loader=FileSystemLoader("html"))
 
 @summary_bp.route('/create-summary', methods=['POST'])
 def create_pdf_summary():
-    print('hello')
     data = request.get_json()
 
     template = env.get_template("summary.html")
