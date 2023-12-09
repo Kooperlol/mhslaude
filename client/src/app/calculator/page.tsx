@@ -200,9 +200,11 @@ export default function Calculator() {
               to_be_earned_classes: state.tbeClasses,
               to_be_earned_points: state.tbeLaudePoints,
               to_be_earned_score: (
-                state.tbeLaudePoints / Number.parseFloat(state.gpaValue)
+                state.tbeLaudePoints * Number.parseFloat(state.gpaValue)
               ).toFixed(2),
-              to_be_earned_status: fromPoints(state.tbeLaudePoints),
+              to_be_earned_status: fromPoints(
+                state.tbeLaudePoints * Number.parseFloat(state.gpaValue)
+              ),
               gpa: state.gpaValue,
               classes: state.laudeClasses,
               startNow: state.startNowValue,
