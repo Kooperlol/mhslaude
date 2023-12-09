@@ -15,6 +15,8 @@ def calculate_laude_points():
         pdf = PdfReader(pdf_file)
         points = 0
         classes = {}
+        to_be_earned_classes = {}
+        to_be_earned_points = 0
         for page in pdf.pages:
             lines = page.extract_text().split('\n')
             flag = False
@@ -28,13 +30,23 @@ def calculate_laude_points():
                 segments = line.split(' ')
                 is_laude_class = is_laude(segments)
                 if (is_laude_class and is_two_trimesters(segments)) or is_half_laude_class(line):
-                    points += 0.5
-                    classes[get_class_name(segments)] = 0.5
+                    if (is_to_be_earned(segments)):
+                        to_be_earned_points += 0.5
+                        to_be_earned_classe[get_class_name(segments)] = 0.5
+                    else:
+                        points += 0.5
+                        to_be_earned_points += 0.5
+                        classes[get_class_name(segments)] = 0.5
                 elif is_laude_class:
-                    points += 1.0
-                    classes[get_class_name(segments)] = 1.0
+                    if (is_to_be_earned(segments)):
+                        to_be_earned_points += 1.0
+                        to_be_earned_classes[get_class_name(segments)] = 1.0
+                    else:
+                        points += 1.0
+                        to_be_earned_points += 1.0
+                        classes[get_class_name(segments)] = 1.0
 
-        return jsonify({'points': points, 'classes': classes, 'name': get_name(pdf.pages[0])})
+        return jsonify({'points': points, 'classes': classes, 'to_be_earned_points': to_be_earned_points, 'to_be_earned_classes': to_be_earned_classes, 'name': get_name(pdf.pages[0])})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
@@ -70,6 +82,17 @@ def is_half_laude_class(line):
     for half_class in half_laude_classes:
         if line.find(half_class) != -1:
             return True
+    return False
+
+def is_to_be_earned(segments):
+    flag = False
+    for segment in segments:
+        if segment.find('0.1') != -1:
+            flag = True
+        if segment == 'L' and flag == False:
+            return True
+        if segment == 'L' and flag == True:
+            return False
     return False
 
 def get_name(page):

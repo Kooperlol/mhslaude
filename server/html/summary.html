@@ -107,5 +107,32 @@
         {% endfor %}
       </table>
     </div>
+    <br />
+    <div class="table-container">
+      <h1>Laude Points To Be Earned</h1>
+      <p>
+        Accrue these laude points by year-end upon successful completion of the
+        specified courses. It's important to recognize that the laude score
+        provided is a projection derived from your current grade point average.
+      </p>
+      <div>
+        <h1>Summary By End of the Year</h1>
+        <p>Laude Status: {{ student.to_be_earned_status }}</p>
+        <p>Laude Score: {{ student.to_be_earned_score }}</p>
+        <p>Laude Points: {{ student.to_be_earned_points }}</p>
+      </div>
+      <table class="styled-table" border="0.1px">
+        <tr>
+          <th>Class</th>
+          <th>Points</th>
+        </tr>
+        {% for class in tbe_classes_list %}
+        <tr>
+          <td>{{ class.name }}</td>
+          <td>{{ class.points }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
   </body>
 </html>

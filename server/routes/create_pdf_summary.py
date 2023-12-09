@@ -18,7 +18,9 @@ def create_pdf_summary():
     current_date = datetime.now().strftime('%m/%d/%Y')
     class_data = data['student'][0]['classes']
     classes_list = [{"name": class_name, "points": class_points} for class_name, class_points in class_data.items()]
-    rendered_template = template.render(student=data['student'][0], classes=classes_list, current_date=current_date)
+    tbe_class_data = data['student'][0]['to_be_earned_classes']
+    tbe_classes_list = [{"name": class_name, "points": class_points} for class_name, class_points in tbe_class_data.items()]
+    rendered_template = template.render(student=data['student'][0], classes=classes_list, tbe_classes=tbe_classes_list, current_date=current_date)
     pdf = create_pdf(rendered_template)
 
     response = Response(pdf, content_type='application/pdf')

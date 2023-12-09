@@ -42,8 +42,10 @@ import OverlayConfetti from "@/components/calculator/confetti";
 // Initalize default variables
 const initState = {
   laudeClasses: {},
+  tbeClasses: {},
   gpaValue: "0.00",
   laudePoints: 0,
+  tbeLaudePoints: 0,
   startNowValue: 0,
   additionalPoints: 0,
   confettiActive: false,
@@ -56,6 +58,8 @@ const enum REDUCER_ACTION_TYPE {
   DECREMENT_LAUDE_POINTS,
   SET_LAUDE_POINTS,
   SET_CLASSES,
+  SET_TBE_CLASSES,
+  SET_TBE_LAUDE_POINTS,
   TOGGLE_CONFEETTI,
   SET_GPA,
   SET_START_NOW,
@@ -80,8 +84,12 @@ const reducer = (
       return { ...state, laudePoints: state.laudePoints - 1 };
     case REDUCER_ACTION_TYPE.SET_LAUDE_POINTS:
       return { ...state, laudePoints: action.payload };
+    case REDUCER_ACTION_TYPE.SET_TBE_LAUDE_POINTS:
+      return { ...state, tbeLaudePoints: action.payload };
     case REDUCER_ACTION_TYPE.SET_CLASSES:
       return { ...state, laudeClasses: action.payload };
+    case REDUCER_ACTION_TYPE.SET_TBE_CLASSES:
+      return { ...state, tbeClasses: action.payload };
     case REDUCER_ACTION_TYPE.TOGGLE_CONFEETTI:
       return { ...state, confettiActive: !state.confettiActive };
     case REDUCER_ACTION_TYPE.SET_GPA:
@@ -148,12 +156,20 @@ export default function Calculator() {
       // Set data like laude points, student name, and classes
       setLaudePoints(laudeResponse.data.points as number);
       dispatch({
+        type: REDUCER_ACTION_TYPE.SET_TBE_LAUDE_POINTS,
+        payload: laudeResponse.data.to_be_earned_points,
+      });
+      dispatch({
         type: REDUCER_ACTION_TYPE.SET_STUDENT_NAME,
         payload: laudeResponse.data.name,
       });
       dispatch({
         type: REDUCER_ACTION_TYPE.SET_CLASSES,
         payload: laudeResponse.data.classes as Map<string, number>,
+      });
+      dispatch({
+        type: REDUCER_ACTION_TYPE.SET_TBE_CLASSES,
+        payload: laudeResponse.data.to_be_earned_classes as Map<string, number>,
       });
     } catch (error) {
       console.error("Error getting laude points:", error);
@@ -181,6 +197,12 @@ export default function Calculator() {
               ).toFixed(2),
               score: state.laudePoints.toFixed(2),
               status: fromPoints(state.laudePoints),
+              to_be_earned_classes: state.tbeClasses,
+              to_be_earned_points: state.tbeLaudePoints,
+              to_be_earned_score: (
+                state.tbeLaudePoints / Number.parseFloat(state.gpaValue)
+              ).toFixed(2),
+              to_be_earned_status: fromPoints(state.tbeLaudePoints),
               gpa: state.gpaValue,
               classes: state.laudeClasses,
               startNow: state.startNowValue,

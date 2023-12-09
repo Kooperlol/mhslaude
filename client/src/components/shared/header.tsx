@@ -70,21 +70,21 @@ export default function Header() {
         <div
           className={
             nav
-              ? "sm:hidden z-40 absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
-              : "sm:hidden z-40 absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
+              ? "sm:hidden z-40 absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-primary text-center ease-in duration-300"
+              : "sm:hidden z-40 absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-primary text-center ease-in duration-300"
           }
         >
           <ul>
-            <li onClick={handleNav} className="p-4 text-4xl hover:text-primary">
+            <li onClick={handleNav} className="p-4 text-4xl hover:text-black">
               <Link href="/">Home</Link>
             </li>
-            <li onClick={handleNav} className="p-4 text-4xl hover:text-primary">
+            <li onClick={handleNav} className="p-4 text-4xl hover:text-black">
               <Link href="/calculator">Calculator</Link>
             </li>
-            <li onClick={handleNav} className="p-4 text-4xl hover:text-primary">
+            <li onClick={handleNav} className="p-4 text-4xl hover:text-black">
               <Link href="/tutorial">Tutorial</Link>
             </li>
-            <li onClick={handleNav} className="p-4 text-4xl hover:text-primary">
+            <li onClick={handleNav} className="p-4 text-4xl hover:text-black">
               <Link href="/about">About</Link>
             </li>
           </ul>
