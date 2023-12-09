@@ -32,7 +32,7 @@ def calculate_laude_points():
                 if (is_laude_class and is_two_trimesters(segments)) or is_half_laude_class(line):
                     if (is_to_be_earned(segments)):
                         to_be_earned_points += 0.5
-                        to_be_earned_classe[get_class_name(segments)] = 0.5
+                        to_be_earned_classes[get_class_name(segments)] = 0.5
                     else:
                         points += 0.5
                         to_be_earned_points += 0.5
