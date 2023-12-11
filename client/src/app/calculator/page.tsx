@@ -477,7 +477,7 @@ export default function Calculator() {
                 <div>
                   <p className="text-5xl">Congratulations!</p>
                   <p className="text-3xl">
-                    You're graduating with {fromPoints(state.laudePoints)}
+                    You're {fromPoints(state.laudePoints)}
                   </p>
                 </div>
                 {LaudeCard(fromPoints(state.laudePoints)!!, false)}
