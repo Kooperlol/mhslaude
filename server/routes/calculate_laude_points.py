@@ -32,18 +32,17 @@ def calculate_laude_points():
                 if (is_laude_class and is_two_trimesters(segments)) or is_half_laude_class(line):
                     if (is_to_be_earned(segments)):
                         to_be_earned_classes[get_class_name(segments)] = 0.5
+                        to_be_earned_points += 0.5
                     else:
                         points += 0.5
                         classes[get_class_name(segments)] = 0.5
-                    to_be_earned_points += 0.5
                 elif is_laude_class:
                     if (is_to_be_earned(segments)):
                         to_be_earned_classes[get_class_name(segments)] = 1.0
+                        to_be_earned_points += 1.0
                     else:
                         points += 1.0
                         classes[get_class_name(segments)] = 1.0
-                    to_be_earned_points += 1.0
-
         return jsonify({'points': points, 'classes': classes, 'to_be_earned_points': to_be_earned_points, 'to_be_earned_classes': to_be_earned_classes, 'name': get_name(pdf.pages[0])})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
@@ -97,5 +96,5 @@ def get_name(page):
     lines = page.extract_text().split('\n')
     for i, line in enumerate(lines):
         if (line.find('PHONE') != -1 and lines[i + 1].find('ACCREDITED') == -1) or line.find('ACCREDITED') != -1:
-            name = re.search(r'(.+?)\s+GRD', lines[i + 1])
+            name = re.search(r'(.+1)\s+GRD', lines[i + 1])
             return name.group(1)

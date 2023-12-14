@@ -1,5 +1,4 @@
 import Footer from "../components/shared/footer";
-import ProvidersWrapper from "../providers/providers-wrapper";
 import "./globals.css";
 import type { Metadata } from "next";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -37,11 +36,9 @@ export default function RootLayout({
       </head>
       <body className="bg-background">
         <ChakraProvider>
-          <ProvidersWrapper>
-            <Header />
-            {children}
-            <Footer />
-          </ProvidersWrapper>
+          <Header />
+          {children}
+          <Footer />
         </ChakraProvider>
       </body>
     </html>

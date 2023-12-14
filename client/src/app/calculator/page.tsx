@@ -62,7 +62,6 @@ const enum REDUCER_ACTION_TYPE {
   SET_TBE_LAUDE_POINTS,
   TOGGLE_CONFEETTI,
   SET_GPA,
-  SET_START_NOW,
   SET_ADDITIONAL_POINTS,
   SET_STUDENT_NAME,
 }
@@ -94,10 +93,6 @@ const reducer = (
       return { ...state, confettiActive: !state.confettiActive };
     case REDUCER_ACTION_TYPE.SET_GPA:
       return { ...state, gpaValue: action.payload };
-    case REDUCER_ACTION_TYPE.SET_START_NOW:
-      return { ...state, startNowValue: action.payload };
-    case REDUCER_ACTION_TYPE.SET_ADDITIONAL_POINTS:
-      return { ...state, additionalPoints: action.payload };
     case REDUCER_ACTION_TYPE.SET_STUDENT_NAME:
       return { ...state, studentName: action.payload };
     default:
@@ -111,8 +106,9 @@ export default function Calculator() {
   const [otherReasons, setOtherReasons] = useState<string[]>([]);
 
   // Reducer functions
-  const incrementLaudePoints = () =>
+  const incrementLaudePoints = () => {
     dispatch({ type: REDUCER_ACTION_TYPE.INCREMENT_LAUDE_POINTS });
+  };
   const decrementLaudePoints = () =>
     dispatch({ type: REDUCER_ACTION_TYPE.DECREMENT_LAUDE_POINTS });
   const setLaudePoints = (points: number) =>
@@ -198,12 +194,14 @@ export default function Calculator() {
               score: state.laudePoints.toFixed(2),
               status: fromPoints(state.laudePoints),
               to_be_earned_classes: state.tbeClasses,
-              to_be_earned_points: state.tbeLaudePoints,
+              to_be_earned_points: state.tbeLaudePoints + state.laudePoints,
               to_be_earned_score: (
-                state.tbeLaudePoints * Number.parseFloat(state.gpaValue)
+                (state.tbeLaudePoints + state.laudePoints) *
+                Number.parseFloat(state.gpaValue)
               ).toFixed(2),
               to_be_earned_status: fromPoints(
-                state.tbeLaudePoints * Number.parseFloat(state.gpaValue)
+                (state.tbeLaudePoints + state.laudePoints) *
+                  Number.parseFloat(state.gpaValue)
               ),
               gpa: state.gpaValue,
               classes: state.laudeClasses,
@@ -368,70 +366,6 @@ export default function Calculator() {
               <Radio value="no">No</Radio>
             </Stack>
           </RadioGroup>
-          <RadioGroup
-            name="form-early-college"
-            defaultValue="no"
-            onChange={(value) => {
-              value == "yes" ? incrementLaudePoints() : decrementLaudePoints();
-              toggleOtherReasons("Early College Credit Program");
-            }}
-          >
-            <p>Have you enrolled in the Early College Credit Program?</p>
-            <Stack spacing={4} direction="row">
-              <Radio value="yes">Yes</Radio>
-              <Radio value="no">No</Radio>
-            </Stack>
-          </RadioGroup>
-          <div>
-            <p>
-              Have you enrolled in the Start College Now Program? If so, how
-              many laude points have been assigned by administration?
-            </p>
-            <NumberInput
-              className="w-1/12"
-              name="form-college-now"
-              defaultValue={0}
-              onChange={(value) =>
-                dispatch({
-                  type: REDUCER_ACTION_TYPE.SET_START_NOW,
-                  payload: Number.parseFloat(value),
-                })
-              }
-              min={0}
-              max={100}
-            >
-              <NumberInputField />
-              <NumberInputStepper>
-                <NumberIncrementStepper />
-                <NumberDecrementStepper />
-              </NumberInputStepper>
-            </NumberInput>
-          </div>
-          <div>
-            <p>
-              Have any additional laude points been assigned by the principal?
-              If so, how many?
-            </p>
-            <NumberInput
-              className="w-1/12"
-              name="form-other"
-              defaultValue={0}
-              onChange={(value) =>
-                dispatch({
-                  type: REDUCER_ACTION_TYPE.SET_ADDITIONAL_POINTS,
-                  payload: Number.parseFloat(value),
-                })
-              }
-              min={0}
-              max={100}
-            >
-              <NumberInputField />
-              <NumberInputStepper>
-                <NumberIncrementStepper />
-                <NumberDecrementStepper />
-              </NumberInputStepper>
-            </NumberInput>
-          </div>
           <Button
             className="w-fit"
             onClick={() => {
