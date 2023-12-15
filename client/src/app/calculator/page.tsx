@@ -47,8 +47,6 @@ const initState = {
   gpaValue: "0.00",
   laudePoints: 0,
   tbeLaudePoints: 0,
-  startNowValue: 0,
-  additionalPoints: 0,
   confettiActive: false,
   studentName: "",
 };
@@ -63,7 +61,6 @@ const enum REDUCER_ACTION_TYPE {
   SET_TBE_LAUDE_POINTS,
   TOGGLE_CONFEETTI,
   SET_GPA,
-  SET_ADDITIONAL_POINTS,
   SET_STUDENT_NAME,
 }
 
@@ -151,7 +148,9 @@ export default function Calculator() {
       );
 
       // Set data like laude points, student name, and classes
-      setLaudePoints(laudeResponse.data.points as number);
+      console.log(state.laudePoints);
+      console.log(laudeResponse.data.points as number);
+      setLaudePoints((state.laudePoints + laudeResponse.data.points) as number);
       dispatch({
         type: REDUCER_ACTION_TYPE.SET_TBE_LAUDE_POINTS,
         payload: laudeResponse.data.to_be_earned_points,
@@ -171,13 +170,6 @@ export default function Calculator() {
     } catch (error) {
       console.error("Error getting laude points:", error);
     }
-  };
-
-  // Adds laude points to get the total
-  const addLaudePoints = () => {
-    const otherPoints: number =
-      state.laudePoints + state.startNowValue + state.additionalPoints;
-    setLaudePoints(otherPoints);
   };
 
   // Creates a PDF summary using the data from the calculations and then requests the user to download it
@@ -208,8 +200,6 @@ export default function Calculator() {
               ),
               gpa: state.gpaValue,
               classes: state.laudeClasses,
-              startNow: state.startNowValue,
-              additionalPoints: state.additionalPoints,
               fourCredits: creditClasses,
               other: otherReasons,
             },
@@ -376,7 +366,6 @@ export default function Calculator() {
             className="w-fit"
             onClick={() => {
               setActiveStep(3);
-              addLaudePoints();
             }}
             size="lg"
           >

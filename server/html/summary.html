@@ -70,28 +70,6 @@
       {% endfor %} {% endif %}
     </div>
     <br />
-    <div>
-      {% if student.other|length > 0 %}
-      <h1>Other</h1>
-      {% for thing in student.other %}
-      <p>{{ thing|capitalize }}</p>
-      {% endfor %} {% endif %}
-    </div>
-    <br />
-    <div>
-      {% if student.startNow > 0 %}
-      <h1>Start College Now Program</h1>
-      <p>Points: {{ student.startNow }}</p>
-      {% endif %}
-    </div>
-    <br />
-    <div>
-      {% if student.additionalPoints > 0 %}
-      <h1>Additional Points</h1>
-      <p>Points: {{ student.additionalPoints }}</p>
-      {% endif %}
-    </div>
-    <br />
     <div class="table-container">
       <h1>Weighted Classes</h1>
       <table class="styled-table" border="0.1px">
