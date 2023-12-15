@@ -182,25 +182,24 @@ export default function Calculator() {
   // Creates a PDF summary using the data from the calculations and then requests the user to download it
   const downloadSummary = async () => {
     try {
+      const points = state.laudePoints / Number.parseFloat(state.gpaValue);
       const pdfResponse = await axios.post(
         "https://mhslaude-backend.vercel.app/pdf/create-summary",
         {
           student: [
             {
               name: state.studentName,
-              points: (
-                state.laudePoints / Number.parseFloat(state.gpaValue)
-              ).toFixed(2),
+              points: points.toFixed(2),
               score: state.laudePoints.toFixed(2),
               status: fromPoints(state.laudePoints),
               to_be_earned_classes: state.tbeClasses,
-              to_be_earned_points: state.tbeLaudePoints + state.laudePoints,
+              to_be_earned_points: state.tbeLaudePoints + points,
               to_be_earned_score: (
-                (state.tbeLaudePoints + state.laudePoints) *
+                (state.tbeLaudePoints + points) *
                 Number.parseFloat(state.gpaValue)
               ).toFixed(2),
               to_be_earned_status: fromPoints(
-                (state.tbeLaudePoints + state.laudePoints) *
+                (state.tbeLaudePoints + points) *
                   Number.parseFloat(state.gpaValue)
               ),
               gpa: state.gpaValue,
@@ -393,8 +392,8 @@ export default function Calculator() {
             fromPoints(state.laudePoints) == null && (
               <p>
                 Sorry, but you do not qualify for any honors. You need{" "}
-                {20 - state.laudePoints} more laude points to qualify for Cum
-                Laude.
+                {(20 - state.laudePoints).toFixed(2)} more laude points to
+                qualify for Cum Laude.
               </p>
             )}
           {Number.parseFloat(state.gpaValue) >= 3 &&
@@ -407,10 +406,10 @@ export default function Calculator() {
             )}
           {fromPoints(state.laudePoints) != null && (
             <div className="flex flex-col items-center">
-              <div className="flex font-bravaslabs flex-row gap-3 text-left items-center justify-between">
+              <div className="flex font-bravaslabs md:flex-row flex-col gap-3 text-left items-center justify-between">
                 <div>
-                  <p className="text-5xl">Congratulations!</p>
-                  <p className="text-3xl">
+                  <p className="md:text-5xl text-3xl">Congratulations!</p>
+                  <p className="md:text-3xl text-xl">
                     You're {fromPoints(state.laudePoints)}
                   </p>
                 </div>
@@ -458,7 +457,7 @@ export default function Calculator() {
   // Desktop
   return (
     <>
-      <div className="flex flex-col justify-center px-10 py-32 gap-10 min-h-screen">
+      <div className="flex flex-col justify-center items-center px-10 py-32 gap-10 min-h-screen">
         {state.confettiActive && <OverlayConfetti />}
         <div className="md:text-center text-left">
           <p className="font-octinsports md:text-6xl text-4xl">
@@ -469,7 +468,7 @@ export default function Calculator() {
           </p>
         </div>
 
-        <Card>
+        <Card className="w-3/4">
           <CardHeader>
             <Stepper
               size="sm"

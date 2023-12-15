@@ -28,63 +28,42 @@ def calculate_laude_points():
                 if flag == False:
                     continue
                 segments = line.split(' ')
-                is_laude_class = is_laude(segments)
-                if (is_laude_class and is_two_trimesters(segments)) or is_half_laude_class(line):
+                if (is_laude(segments)):
+                    print(line)
+                    credits = get_credits(segments)
                     if (is_to_be_earned(segments)):
-                        to_be_earned_classes[get_class_name(segments)] = 0.5
-                        to_be_earned_points += 0.5
+                        to_be_earned_classes[get_class_name(segments)] = credits
+                        to_be_earned_points += credits
                     else:
-                        points += 0.5
-                        classes[get_class_name(segments)] = 0.5
-                elif is_laude_class:
-                    if (is_to_be_earned(segments)):
-                        to_be_earned_classes[get_class_name(segments)] = 1.0
-                        to_be_earned_points += 1.0
-                    else:
-                        points += 1.0
-                        classes[get_class_name(segments)] = 1.0
+                        points += credits
+                        classes[get_class_name(segments)] = credits
         return jsonify({'points': points, 'classes': classes, 'to_be_earned_points': to_be_earned_points, 'to_be_earned_classes': to_be_earned_classes, 'name': get_name(pdf.pages[0])})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
 def is_laude(segments):
     for segment in segments:
-        if segment == 'L':
+        if segment == 'L' or segment == 'TUTOR':
             return True
     return False
 
 def get_class_name(segments):
     name = ''
     for segment in segments:
-        if segment.find('0.') != -1:
+        if is_valid_double(segment) or segment == 'L':
             return ' '.join(name.split())
         name += segment + ' '
-
-def is_two_trimesters(segments):
+        
+def get_credits(segments):
     for segment in segments:
-        if segment.find('0.') != -1:
-            return False
-        if segment == 'A' or segment == 'B':
-            return True
-    return False
-
-half_laude_classes = [
-    'Advanced Drawing',
-    'Advanced Painting',
-    'Shop Math I',
-    'Shop Math II'
-]
-
-def is_half_laude_class(line):
-    for half_class in half_laude_classes:
-        if line.find(half_class) != -1:
-            return True
-    return False
+        if (is_valid_double(segment)):
+            print(float(segment))
+            return float(segment)
 
 def is_to_be_earned(segments):
     flag = False
     for segment in segments:
-        if segment.find('0.') != -1:
+        if is_valid_double(segment):
             flag = True
         if segment == 'L' and flag == False:
             return True
@@ -96,5 +75,14 @@ def get_name(page):
     lines = page.extract_text().split('\n')
     for i, line in enumerate(lines):
         if (line.find('PHONE') != -1 and lines[i + 1].find('ACCREDITED') == -1) or line.find('ACCREDITED') != -1:
-            name = re.search(r'(.+1)\s+GRD', lines[i + 1])
+            name = re.search(r'(.+?)\sGRD', lines[i + 1])
             return name.group(1)
+
+def is_valid_double(s):
+    if (s.find('.') == -1):
+        return False
+    try:
+        float_value = float(s)
+        return True
+    except ValueError:
+        return False
