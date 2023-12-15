@@ -38,6 +38,7 @@ import { fromPoints } from "../../enums/laude-enum";
 import LaudeCard from "../../components/shared/laude-card";
 import { FOUR_CREDITS, getSubjectClasses } from "@/enums/four-credits-enum";
 import OverlayConfetti from "@/components/calculator/confetti";
+import { stat } from "fs";
 
 // Initalize default variables
 const initState = {
@@ -176,30 +177,33 @@ export default function Calculator() {
   const addLaudePoints = () => {
     const otherPoints: number =
       state.laudePoints + state.startNowValue + state.additionalPoints;
-    setLaudePoints(Number.parseFloat(state.gpaValue) * otherPoints);
+    setLaudePoints(otherPoints);
   };
 
   // Creates a PDF summary using the data from the calculations and then requests the user to download it
   const downloadSummary = async () => {
     try {
-      const points = state.laudePoints / Number.parseFloat(state.gpaValue);
       const pdfResponse = await axios.post(
         "https://mhslaude-backend.vercel.app/pdf/create-summary",
         {
           student: [
             {
               name: state.studentName,
-              points: points.toFixed(2),
-              score: state.laudePoints.toFixed(2),
-              status: fromPoints(state.laudePoints),
+              points: state.laudePoints.toFixed(2),
+              score: (
+                state.laudePoints * Number.parseFloat(state.gpaValue)
+              ).toFixed(2),
+              status: fromPoints(
+                state.laudePoints * Number.parseFloat(state.gpaValue)
+              ),
               to_be_earned_classes: state.tbeClasses,
-              to_be_earned_points: state.tbeLaudePoints + points,
+              to_be_earned_points: state.tbeLaudePoints + state.laudePoints,
               to_be_earned_score: (
-                (state.tbeLaudePoints + points) *
+                (state.tbeLaudePoints + state.laudePoints) *
                 Number.parseFloat(state.gpaValue)
               ).toFixed(2),
               to_be_earned_status: fromPoints(
-                (state.tbeLaudePoints + points) *
+                (state.tbeLaudePoints + state.laudePoints) *
                   Number.parseFloat(state.gpaValue)
               ),
               gpa: state.gpaValue,
