@@ -393,22 +393,34 @@ export default function Calculator() {
             </p>
           )}
           {Number.parseFloat(state.gpaValue) >= 3 &&
-            fromPoints(state.laudePoints) == null && (
+            fromPoints(state.laudePoints * Number.parseFloat(state.gpaValue)) ==
+              null && (
               <p>
                 Sorry, but you do not qualify for any honors. You need{" "}
-                {(20 - state.laudePoints).toFixed(2)} more laude points to
-                qualify for Cum Laude.
+                {(
+                  20 -
+                  state.laudePoints * Number.parseFloat(state.gpaValue)
+                ).toFixed(2)}{" "}
+                more laude points to qualify for Cum Laude.
               </p>
             )}
           {Number.parseFloat(state.gpaValue) >= 3 &&
-            fromPoints(state.tbeLaudePoints) != null &&
-            fromPoints(state.laudePoints) == null && (
+            fromPoints(
+              state.tbeLaudePoints * Number.parseFloat(state.gpaValue)
+            ) != null &&
+            fromPoints(state.laudePoints * Number.parseFloat(state.gpaValue)) ==
+              null && (
               <p>
                 Note: If you continue and pass your current courses, you should
-                reach {fromPoints(state.tbeLaudePoints)} by the end of the year.
+                reach{" "}
+                {fromPoints(
+                  state.tbeLaudePoints * Number.parseFloat(state.gpaValue)
+                )}{" "}
+                by the end of the year.
               </p>
             )}
-          {fromPoints(state.laudePoints) != null && (
+          {fromPoints(state.laudePoints * Number.parseFloat(state.gpaValue)) !=
+            null && (
             <div className="flex flex-col items-center">
               <div className="flex font-bravaslabs md:flex-row flex-col gap-3 text-left items-center justify-between">
                 <div>
