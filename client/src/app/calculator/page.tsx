@@ -314,7 +314,10 @@ export default function Calculator() {
                 step={0.01}
                 max={4.0}
                 min={0.0}
-                onChange={(gpa) => setGpaValue(gpa)}
+                onChange={(gpa) => {
+                  setGpaValue(gpa);
+                  console.log(gpa);
+                }}
               >
                 <NumberInputField />
                 <NumberInputStepper>
@@ -427,10 +430,18 @@ export default function Calculator() {
                   <div>
                     <p className="md:text-5xl text-3xl">Congratulations!</p>
                     <p className="md:text-3xl text-xl">
-                      You're {fromPoints(state.laudePoints)}
+                      You're{" "}
+                      {fromPoints(
+                        state.laudePoints * Number.parseFloat(state.gpaValue)
+                      )}
                     </p>
                   </div>
-                  {LaudeCard(fromPoints(state.laudePoints)!!, false)}
+                  {LaudeCard(
+                    fromPoints(
+                      state.laudePoints * Number.parseFloat(state.gpaValue)
+                    )!!,
+                    false
+                  )}
                 </div>
                 <Button onClick={() => downloadSummary()} variant="default">
                   Download Summary
