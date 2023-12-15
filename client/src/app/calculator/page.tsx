@@ -148,8 +148,6 @@ export default function Calculator() {
       );
 
       // Set data like laude points, student name, and classes
-      console.log(state.laudePoints);
-      console.log(laudeResponse.data.points as number);
       setLaudePoints((state.laudePoints + laudeResponse.data.points) as number);
       dispatch({
         type: REDUCER_ACTION_TYPE.SET_TBE_LAUDE_POINTS,
@@ -306,7 +304,6 @@ export default function Calculator() {
                 min={0.0}
                 onChange={(gpa) => {
                   setGpaValue(gpa);
-                  console.log(gpa);
                 }}
               >
                 <NumberInputField />
