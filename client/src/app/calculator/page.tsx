@@ -419,23 +419,24 @@ export default function Calculator() {
                 by the end of the year.
               </p>
             )}
-          {fromPoints(state.laudePoints * Number.parseFloat(state.gpaValue)) !=
-            null && (
-            <div className="flex flex-col items-center">
-              <div className="flex font-bravaslabs md:flex-row flex-col gap-3 text-left items-center justify-between">
-                <div>
-                  <p className="md:text-5xl text-3xl">Congratulations!</p>
-                  <p className="md:text-3xl text-xl">
-                    You're {fromPoints(state.laudePoints)}
-                  </p>
+          {Number.parseFloat(state.gpaValue) >= 3 &&
+            fromPoints(state.laudePoints * Number.parseFloat(state.gpaValue)) !=
+              null && (
+              <div className="flex flex-col items-center">
+                <div className="flex font-bravaslabs md:flex-row flex-col gap-3 text-left items-center justify-between">
+                  <div>
+                    <p className="md:text-5xl text-3xl">Congratulations!</p>
+                    <p className="md:text-3xl text-xl">
+                      You're {fromPoints(state.laudePoints)}
+                    </p>
+                  </div>
+                  {LaudeCard(fromPoints(state.laudePoints)!!, false)}
                 </div>
-                {LaudeCard(fromPoints(state.laudePoints)!!, false)}
+                <Button onClick={() => downloadSummary()} variant="default">
+                  Download Summary
+                </Button>
               </div>
-              <Button onClick={() => downloadSummary()} variant="default">
-                Download Summary
-              </Button>
-            </div>
-          )}
+            )}
         </>
       ),
     },
