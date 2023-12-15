@@ -463,7 +463,7 @@ export default function Calculator() {
     if (activeStep != 3) return;
     if (
       Number.parseFloat(state.gpaValue) >= 3 &&
-      fromPoints(state.laudePoints) != null
+      fromPoints(state.laudePoints * Number.parseFloat(state.gpaValue)) != null
     ) {
       toggleConfetti();
     }
