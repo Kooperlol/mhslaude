@@ -76,11 +76,9 @@ export default function Tutorial() {
           </li>
           <li>
             Answer questions about any additional programs or points you've
-            earned, such as being a Global Scholars Program (GSP) qualifier,
-            completing Youth Apprenticeship Level 2, or participating in the
-            Early College Credit Program.
+            earned, such as being a Global Scholars Program (GSP) qualifier or
+            completing Youth Apprenticeship Level 2.
           </li>
-          <li>Enter any laude points assigned by the principal.</li>
           <li>Click "Next" to proceed to the results page.</li>
         </ol>
       </div>
@@ -93,7 +91,8 @@ export default function Tutorial() {
           </li>
           <li>
             If your GPA is 3.00 or higher, you'll be able to download a summary
-            of your Laude Points and honors.
+            of your Laude Points and honors. Otherwise, you'll see how many more
+            laude points you need to qualify.
           </li>
         </ol>
       </div>

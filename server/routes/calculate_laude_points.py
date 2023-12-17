@@ -43,7 +43,7 @@ def calculate_laude_points():
 
 def is_laude(segments):
     for segment in segments:
-        if segment == 'L' or segment == 'TUTOR':
+        if segment == 'L':
             return True
     return False
 

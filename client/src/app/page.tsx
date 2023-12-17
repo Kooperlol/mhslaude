@@ -63,11 +63,11 @@ export default function Home() {
           <div className="flex-col flex gap-5">
             <p className="font-bravaslab lg:text-3xl text-2xl">
               Get personalized feedback from uploading your transcript! Our
-              technology can recommend classes to boost your laude points.
+              technology can show future projections.
             </p>
             <div className="md:object-left object-center">
               <Button asChild size="lg">
-                <Link href="#">Coming Soon</Link>
+                <Link href="/calculator">Get Feedback</Link>
               </Button>
             </div>
           </div>
