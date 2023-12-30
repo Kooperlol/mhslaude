@@ -211,15 +211,18 @@ export default function Calculator() {
                   )!!
                 ) == null
                   ? null
-                  : toNumeralPoints(
-                      getNextLaudeStatus(
-                        fromPoints(
-                          state.laudePoints * Number.parseFloat(state.gpaValue)
+                  : (
+                      toNumeralPoints(
+                        getNextLaudeStatus(
+                          fromPoints(
+                            state.laudePoints *
+                              Number.parseFloat(state.gpaValue)
+                          )!!
                         )!!
-                      )!!
-                    )!! /
-                      Number.parseFloat(state.gpaValue) -
-                    state.laudePoints,
+                      )!! /
+                        Number.parseFloat(state.gpaValue) -
+                      state.laudePoints
+                    ).toFixed(2),
               gpa: state.gpaValue,
               classes: state.laudeClasses,
               fourCredits: creditClasses,
