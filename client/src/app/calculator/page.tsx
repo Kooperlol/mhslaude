@@ -204,13 +204,22 @@ export default function Calculator() {
                   state.laudePoints * Number.parseFloat(state.gpaValue)
                 )!!
               ),
-              next_needed_points: toNumeralPoints(
+              next_needed_points:
                 getNextLaudeStatus(
                   fromPoints(
                     state.laudePoints * Number.parseFloat(state.gpaValue)
                   )!!
-                )!!
-              ),
+                ) == null
+                  ? null
+                  : toNumeralPoints(
+                      getNextLaudeStatus(
+                        fromPoints(
+                          state.laudePoints * Number.parseFloat(state.gpaValue)
+                        )!!
+                      )!!
+                    )!! /
+                      Number.parseFloat(state.gpaValue) -
+                    state.laudePoints,
               gpa: state.gpaValue,
               classes: state.laudeClasses,
               fourCredits: creditClasses,
