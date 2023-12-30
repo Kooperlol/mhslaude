@@ -62,6 +62,13 @@
       <p>Grade Point Average: {{ student.gpa }}</p>
     </div>
     <br />
+    {% if next_status %}
+    <p>
+      You need {{ next_needed_points }} more points to graduate as {{
+      next_status }}.
+    </p>
+    {% endif %}
+    <br />
     <div>
       {% if student.fourCredits|length > 0 %}
       <h1>Four Credits of a Subject</h1>
@@ -71,7 +78,7 @@
     </div>
     <br />
     <div class="table-container">
-      <h1>Weighted Classes</h1>
+      <h1>Laude Classes</h1>
       <table class="styled-table" border="0.1px">
         <tr>
           <th>Class</th>

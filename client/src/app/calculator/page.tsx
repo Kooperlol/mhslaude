@@ -34,11 +34,14 @@ import {
   Stepper,
   useSteps,
 } from "@chakra-ui/react";
-import { fromPoints } from "../../enums/laude-enum";
+import {
+  fromPoints,
+  getNextLaudeStatus,
+  toNumeralPoints,
+} from "../../enums/laude-enum";
 import LaudeCard from "../../components/shared/laude-card";
 import { FOUR_CREDITS, getSubjectClasses } from "@/enums/four-credits-enum";
 import OverlayConfetti from "@/components/calculator/confetti";
-import { stat } from "fs";
 
 // Initalize default variables
 const initState = {
@@ -195,6 +198,18 @@ export default function Calculator() {
               to_be_earned_status: fromPoints(
                 (state.tbeLaudePoints + state.laudePoints) *
                   Number.parseFloat(state.gpaValue)
+              ),
+              next_status: getNextLaudeStatus(
+                fromPoints(
+                  state.laudePoints * Number.parseFloat(state.gpaValue)
+                )!!
+              ),
+              next_needed_points: toNumeralPoints(
+                getNextLaudeStatus(
+                  fromPoints(
+                    state.laudePoints * Number.parseFloat(state.gpaValue)
+                  )!!
+                )!!
               ),
               gpa: state.gpaValue,
               classes: state.laudeClasses,

@@ -44,3 +44,29 @@ export function fromPoints(points: number): LAUDE | null {
       return null;
   }
 }
+
+export function toNumeralPoints(status: LAUDE): number | null {
+  switch (status) {
+    case LAUDE.CUM_LAUDE:
+      return 20;
+    case LAUDE.MAGNA_CUM_LAUDE:
+      return 40;
+    case LAUDE.SUMMA_CUM_LAUDE:
+      return 60;
+    default:
+      return null;
+  }
+}
+
+export function getNextLaudeStatus(currentStatus: LAUDE): LAUDE | null {
+  switch (currentStatus) {
+    case LAUDE.CUM_LAUDE:
+      return LAUDE.MAGNA_CUM_LAUDE;
+    case LAUDE.MAGNA_CUM_LAUDE:
+      return LAUDE.SUMMA_CUM_LAUDE;
+    case LAUDE.SUMMA_CUM_LAUDE:
+      return null;
+    default:
+      return null;
+  }
+}
