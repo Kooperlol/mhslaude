@@ -58,7 +58,7 @@ const initState = {
 const enum REDUCER_ACTION_TYPE {
   INCREMENT_LAUDE_POINTS,
   DECREMENT_LAUDE_POINTS,
-  SET_LAUDE_POINTS,
+  ADD_LAUDE_POINTS,
   SET_CLASSES,
   SET_TBE_CLASSES,
   SET_TBE_LAUDE_POINTS,
@@ -80,10 +80,10 @@ const reducer = (
   switch (action.type) {
     case REDUCER_ACTION_TYPE.INCREMENT_LAUDE_POINTS:
       return { ...state, laudePoints: state.laudePoints + 1 };
+    case REDUCER_ACTION_TYPE.ADD_LAUDE_POINTS:
+      return { ...state, laudePoints: state.laudePoints + action.payload };
     case REDUCER_ACTION_TYPE.DECREMENT_LAUDE_POINTS:
       return { ...state, laudePoints: state.laudePoints - 1 };
-    case REDUCER_ACTION_TYPE.SET_LAUDE_POINTS:
-      return { ...state, laudePoints: action.payload };
     case REDUCER_ACTION_TYPE.SET_TBE_LAUDE_POINTS:
       return { ...state, tbeLaudePoints: action.payload };
     case REDUCER_ACTION_TYPE.SET_CLASSES:
@@ -112,9 +112,9 @@ export default function Calculator() {
   };
   const decrementLaudePoints = () =>
     dispatch({ type: REDUCER_ACTION_TYPE.DECREMENT_LAUDE_POINTS });
-  const setLaudePoints = (points: number) =>
+  const addLaudePoints = (points: number) =>
     dispatch({
-      type: REDUCER_ACTION_TYPE.SET_LAUDE_POINTS,
+      type: REDUCER_ACTION_TYPE.ADD_LAUDE_POINTS,
       payload: points,
     });
   const setGpaValue = (gpa: string) =>
@@ -151,7 +151,7 @@ export default function Calculator() {
       );
 
       // Set data like laude points, student name, and classes
-      setLaudePoints((state.laudePoints + laudeResponse.data.points) as number);
+      addLaudePoints(laudeResponse.data.points);
       dispatch({
         type: REDUCER_ACTION_TYPE.SET_TBE_LAUDE_POINTS,
         payload: laudeResponse.data.to_be_earned_points,
