@@ -63,10 +63,14 @@
     </div>
     <br />
     {% if next_status %}
+    <h1>Projections</h1>
     <p>
-      You need {{ next_needed_points }} more points to graduate as {{
-      next_status }}.
+      You need your laude score to increase by {{ next_needed_score }} to
+      graduate as {{ next_status }}.
     </p>
+    <br />
+    <h1>Laude Point Brackets</h1>
+    <img src="images/laudeg_brackets.png" alt="Laude Brackets" width="450" />
     {% endif %}
     <br />
     <div>

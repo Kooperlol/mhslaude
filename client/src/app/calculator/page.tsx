@@ -204,7 +204,7 @@ export default function Calculator() {
                   state.laudePoints * Number.parseFloat(state.gpaValue)
                 )!!
               ),
-              next_needed_points:
+              next_needed_score:
                 getNextLaudeStatus(
                   fromPoints(
                     state.laudePoints * Number.parseFloat(state.gpaValue)
@@ -219,9 +219,8 @@ export default function Calculator() {
                               Number.parseFloat(state.gpaValue)
                           )!!
                         )!!
-                      )!! /
-                        Number.parseFloat(state.gpaValue) -
-                      state.laudePoints
+                      )!! -
+                      state.laudePoints * Number.parseFloat(state.gpaValue)
                     ).toFixed(2),
               gpa: state.gpaValue,
               classes: state.laudeClasses,
@@ -318,8 +317,8 @@ export default function Calculator() {
         <div className="flex flex-col gap-8 font-bravaslabs">
           <div>
             <p>
-              What is your unweighted grade point average (GPA)? Enter what
-              appears on Skyward.
+              What is your grade point average (GPA)? Enter what appears on
+              Skyward.
             </p>
             <Flex className="w-1/4">
               <NumberInput
