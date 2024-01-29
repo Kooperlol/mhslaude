@@ -29,7 +29,6 @@ def calculate_laude_points():
                     continue
                 segments = line.split(' ')
                 if (is_laude(segments)):
-                    print(line)
                     credits = get_credits(segments)
                     if (is_to_be_earned(segments)):
                         to_be_earned_classes[get_class_name(segments)] = credits
@@ -57,7 +56,6 @@ def get_class_name(segments):
 def get_credits(segments):
     for segment in segments:
         if (is_valid_double(segment)):
-            print(float(segment))
             return float(segment)
 
 def is_to_be_earned(segments):
