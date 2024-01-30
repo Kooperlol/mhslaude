@@ -204,24 +204,16 @@ export default function Calculator() {
                   state.laudePoints * Number.parseFloat(state.gpaValue)
                 )!!
               ),
-              next_needed_score:
-                getNextLaudeStatus(
-                  fromPoints(
-                    state.laudePoints * Number.parseFloat(state.gpaValue)
-                  )!!
-                ) == null
-                  ? null
-                  : (
-                      toNumeralPoints(
-                        getNextLaudeStatus(
-                          fromPoints(
-                            state.laudePoints *
-                              Number.parseFloat(state.gpaValue)
-                          )!!
-                        )!!
-                      )!! -
+              next_needed_points:
+                (toNumeralPoints(
+                  getNextLaudeStatus(
+                    fromPoints(
                       state.laudePoints * Number.parseFloat(state.gpaValue)
-                    ).toFixed(2),
+                    )!!
+                  )!!
+                )!! -
+                  state.laudePoints * Number.parseFloat(state.gpaValue)) /
+                Number.parseFloat(state.gpaValue),
               gpa: state.gpaValue,
               classes: state.laudeClasses,
               fourCredits: creditClasses,
@@ -320,7 +312,7 @@ export default function Calculator() {
               What is your grade point average (GPA)? Enter what appears on
               Skyward.
             </p>
-            <Flex className="w-1/4">
+            <Flex className="w-1/3">
               <NumberInput
                 maxW="100px"
                 mr="2rem"
@@ -402,22 +394,41 @@ export default function Calculator() {
       component: (
         <>
           {Number.parseFloat(state.gpaValue) < 3 && (
-            <p className="text-center font-bravaslabs text-xl">
-              Sorry, but you need to have at least a GPA of 3.00 to graduate
-              with honors.
-            </p>
+            <div>
+              <p className="text-center font-bravaslabs text-xl">
+                Sorry, but you need to have at least a GPA of 3.00 to graduate
+                with honors.
+              </p>
+              <p>
+                Current Laude Score: $
+                {(
+                  state.laudePoints * Number.parseFloat(state.gpaValue)
+                ).toFixed(2)}
+              </p>
+              <p>Current Laude Points: ${state.laudePoints}</p>
+            </div>
           )}
           {Number.parseFloat(state.gpaValue) >= 3 &&
             fromPoints(state.laudePoints * Number.parseFloat(state.gpaValue)) ==
               null && (
-              <p>
-                Sorry, but you do not qualify for any honors. You need{" "}
-                {(
-                  20 -
-                  state.laudePoints * Number.parseFloat(state.gpaValue)
-                ).toFixed(2)}{" "}
-                more laude points to qualify for Cum Laude.
-              </p>
+              <div>
+                <p>
+                  You're almost there! You need{" "}
+                  {(
+                    (20 -
+                      state.laudePoints * Number.parseFloat(state.gpaValue)) /
+                    Number.parseFloat(state.gpaValue)
+                  ).toFixed(2)}{" "}
+                  more laude points to qualify for Cum Laude.
+                </p>
+                <p>
+                  Current Laude Score: $
+                  {(
+                    state.laudePoints * Number.parseFloat(state.gpaValue)
+                  ).toFixed(2)}
+                </p>
+                <p>Current Laude Points: ${state.laudePoints}</p>
+              </div>
             )}
           {Number.parseFloat(state.gpaValue) >= 3 &&
             fromPoints(
@@ -508,7 +519,7 @@ export default function Calculator() {
           </p>
         </div>
 
-        <Card className="w-3/4">
+        <Card className="md:w-3/4 w-fit">
           <CardHeader>
             <Stepper
               size="sm"
