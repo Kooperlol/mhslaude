@@ -401,7 +401,7 @@ export default function Calculator() {
                 with honors.
               </p>
               <p>
-                Current Laude Score:
+                Current Laude Score:{" "}
                 {(
                   state.laudePoints * Number.parseFloat(state.gpaValue)
                 ).toFixed(2)}
@@ -423,7 +423,7 @@ export default function Calculator() {
                   more laude points to qualify for Cum Laude.
                 </p>
                 <p>
-                  Current Laude Score:
+                  Current Laude Score:{" "}
                   {(
                     state.laudePoints * Number.parseFloat(state.gpaValue)
                   ).toFixed(2)}
