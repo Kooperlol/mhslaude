@@ -204,7 +204,7 @@ export default function Calculator() {
                   state.laudePoints * Number.parseFloat(state.gpaValue)
                 )!!
               ),
-              next_needed_points:
+              next_needed_points: (
                 (toNumeralPoints(
                   getNextLaudeStatus(
                     fromPoints(
@@ -213,7 +213,8 @@ export default function Calculator() {
                   )!!
                 )!! -
                   state.laudePoints * Number.parseFloat(state.gpaValue)) /
-                Number.parseFloat(state.gpaValue),
+                Number.parseFloat(state.gpaValue)
+              ).toFixed(2),
               gpa: state.gpaValue,
               classes: state.laudeClasses,
               fourCredits: creditClasses,
@@ -394,24 +395,24 @@ export default function Calculator() {
       component: (
         <>
           {Number.parseFloat(state.gpaValue) < 3 && (
-            <div>
-              <p className="text-center font-bravaslabs text-xl">
+            <div className="text-center font-bravaslabs text-xl">
+              <p>
                 Sorry, but you need to have at least a GPA of 3.00 to graduate
                 with honors.
               </p>
               <p>
-                Current Laude Score: $
+                Current Laude Score:
                 {(
                   state.laudePoints * Number.parseFloat(state.gpaValue)
                 ).toFixed(2)}
               </p>
-              <p>Current Laude Points: ${state.laudePoints}</p>
+              <p>Current Laude Points: {state.laudePoints}</p>
             </div>
           )}
           {Number.parseFloat(state.gpaValue) >= 3 &&
             fromPoints(state.laudePoints * Number.parseFloat(state.gpaValue)) ==
               null && (
-              <div>
+              <div className="text-center font-bravaslabs text-xl">
                 <p>
                   You're almost there! You need{" "}
                   {(
@@ -422,12 +423,12 @@ export default function Calculator() {
                   more laude points to qualify for Cum Laude.
                 </p>
                 <p>
-                  Current Laude Score: $
+                  Current Laude Score:
                   {(
                     state.laudePoints * Number.parseFloat(state.gpaValue)
                   ).toFixed(2)}
                 </p>
-                <p>Current Laude Points: ${state.laudePoints}</p>
+                <p>Current Laude Points: {state.laudePoints}</p>
               </div>
             )}
           {Number.parseFloat(state.gpaValue) >= 3 &&
