@@ -12,8 +12,6 @@ env = Environment(loader=FileSystemLoader("html"))
 def create_pdf_summary():
     data = request.get_json()
 
-    print(data)
-
     template = env.get_template("summary.html")
 
     current_date = datetime.now().strftime('%m/%d/%Y')

@@ -1,8 +1,9 @@
 "use client";
 import React, { useReducer, useState, useEffect } from "react";
-import { Tooltip } from "@chakra-ui/react";
+import { Tooltip, useToast } from "@chakra-ui/react";
 import axios from "axios";
 import { Dropzone, ExtFile } from "@dropzone-ui/react";
+import { useRouter } from "next/navigation";
 import { Button } from "../../components/shared/button";
 import {
   Box,
@@ -103,8 +104,11 @@ const reducer = (
 
 export default function Calculator() {
   const [state, dispatch] = useReducer(reducer, initState);
+  const [loading, setLoading] = useState(false);
   const [creditClasses, setCreditClasses] = useState<string[]>([]);
   const [otherReasons, setOtherReasons] = useState<string[]>([]);
+  const toast = useToast();
+  const router = useRouter();
 
   // Reducer functions
   const incrementLaudePoints = () => {
@@ -143,12 +147,15 @@ export default function Calculator() {
   const readTranscript = async (file: ExtFile) => {
     const transcriptFormData = new FormData();
     transcriptFormData.append("transcript", file.file!);
+    setLoading(true);
 
     try {
       const laudeResponse = await axios.post(
         "https://mhslaude-backend.vercel.app/laude-points/calculate",
         transcriptFormData
       );
+
+      setLoading(false);
 
       // Set data like laude points, student name, and classes
       addLaudePoints(laudeResponse.data.points);
@@ -170,12 +177,14 @@ export default function Calculator() {
       });
     } catch (error) {
       console.error("Error getting laude points:", error);
+      router.push("/error");
     }
   };
 
   // Creates a PDF summary using the data from the calculations and then requests the user to download it
   const downloadSummary = async () => {
     try {
+      setLoading(true);
       const pdfResponse = await axios.post(
         "https://mhslaude-backend.vercel.app/pdf/create-summary",
         {
@@ -227,6 +236,8 @@ export default function Calculator() {
         }
       );
 
+      setLoading(false);
+
       if (pdfResponse.status == 200) {
         const blob = new Blob([pdfResponse.data], { type: "application/pdf" });
         const url = window.URL.createObjectURL(blob);
@@ -239,9 +250,11 @@ export default function Calculator() {
         document.body.removeChild(a);
       } else {
         console.error("PDF generation failed!");
+        router.push("/error");
       }
     } catch (error) {
       console.error("Error getting pdf summary:", error);
+      router.push("/error");
     }
   };
 
@@ -429,6 +442,9 @@ export default function Calculator() {
                   ).toFixed(2)}
                 </p>
                 <p>Current Laude Points: {state.laudePoints}</p>
+                <Button onClick={() => downloadSummary()} variant="default">
+                  Download Summary
+                </Button>
               </div>
             )}
           {Number.parseFloat(state.gpaValue) >= 3 &&
@@ -485,6 +501,18 @@ export default function Calculator() {
 
   useEffect(() => {
     if (activeStep != 3) return;
+    if (loading) {
+      toast({
+        title: "Processing Transcript",
+        colorScheme: "red",
+        description:
+          "We are currently processing your transcript. Please try again later.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+      return;
+    }
     if (
       Number.parseFloat(state.gpaValue) >= 3 &&
       fromPoints(state.laudePoints * Number.parseFloat(state.gpaValue)) != null
