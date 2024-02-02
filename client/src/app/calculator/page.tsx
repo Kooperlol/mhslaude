@@ -429,16 +429,16 @@ export default function Calculator() {
               <div className="text-center font-bravaslabs text-xl">
                 <p>
                   You're almost there! You need{" "}
-                  {(
+                  {roundHalf(
                     (20 -
                       state.laudePoints * Number.parseFloat(state.gpaValue)) /
-                    Number.parseFloat(state.gpaValue)
+                      Number.parseFloat(state.gpaValue)
                   ).toFixed(2)}{" "}
                   more laude points to qualify for Cum Laude.
                 </p>
                 <p>
                   Current Laude Score:{" "}
-                  {roundHalf(
+                  {(
                     state.laudePoints * Number.parseFloat(state.gpaValue)
                   ).toFixed(2)}
                 </p>
