@@ -43,6 +43,7 @@ import {
 import LaudeCard from "../../components/shared/laude-card";
 import { FOUR_CREDITS, getSubjectClasses } from "@/enums/four-credits-enum";
 import OverlayConfetti from "@/components/calculator/confetti";
+import { roundHalf } from "@/lib/utils";
 
 // Initalize default variables
 const initState = {
@@ -213,7 +214,7 @@ export default function Calculator() {
                   state.laudePoints * Number.parseFloat(state.gpaValue)
                 )!!
               ),
-              next_needed_points: (
+              next_needed_points: roundHalf(
                 (toNumeralPoints(
                   getNextLaudeStatus(
                     fromPoints(
@@ -222,7 +223,7 @@ export default function Calculator() {
                   )!!
                 )!! -
                   state.laudePoints * Number.parseFloat(state.gpaValue)) /
-                Number.parseFloat(state.gpaValue)
+                  Number.parseFloat(state.gpaValue)
               ).toFixed(2),
               gpa: state.gpaValue,
               classes: state.laudeClasses,
@@ -437,7 +438,7 @@ export default function Calculator() {
                 </p>
                 <p>
                   Current Laude Score:{" "}
-                  {(
+                  {roundHalf(
                     state.laudePoints * Number.parseFloat(state.gpaValue)
                   ).toFixed(2)}
                 </p>
