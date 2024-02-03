@@ -392,6 +392,9 @@ export default function Calculator() {
               <Radio value="no">No</Radio>
             </Stack>
           </RadioGroup>
+          <Button className="w-fit" onClick={() => setActiveStep(1)} size="lg">
+            Back
+          </Button>
           <Button
             className="w-fit"
             onClick={() => {
