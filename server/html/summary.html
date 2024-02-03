@@ -54,7 +54,16 @@
       <h2>Date: {{ current_date }}</h2>
     </div>
     <br />
-    <div>
+    <a href="#summary">Summary</a>
+    <a href="#projections">Projections</a>
+    <a href="#brackets">Laude Score Brackets</a>
+    {% if student.fourCredits|length > 0 %}
+    <a href="#four_credit">Four Credit Subjects</a>
+    {% endif %}
+    <a href="#classes">Laude Classes</a>
+    <a href="#summary_end">Summary By End of the Year</a>
+    <br />
+    <div id="summary">
       <h1>Summary</h1>
       <p>Laude Status: {{ student.status }}</p>
       <p>Laude Score: {{ student.score }}</p>
@@ -63,13 +72,13 @@
     </div>
     <br />
     {% if next_status %}
-    <h1>Projections</h1>
+    <h1 id="projections">Projections</h1>
     <p>
       If your GPA remains at {{ student.gpa }}, you need to increase your laude
       points by {{ next_needed_points }} to graduate as {{ next_status }}.
     </p>
     <br />
-    <h1>Laude Score Brackets</h1>
+    <h1 id="brackets">Laude Score Brackets</h1>
     <table class="styled-table" border="0.1px">
       <tr>
         <th>Laude Status</th>
@@ -90,7 +99,7 @@
     </table>
     {% endif %}
     <br />
-    <div>
+    <div id="four_credits">
       {% if student.fourCredits|length > 0 %}
       <h1>Four Credits of a Subject</h1>
       {% for subject in student.fourCredits %}
@@ -98,7 +107,7 @@
       {% endfor %} {% endif %}
     </div>
     <br />
-    <div class="table-container">
+    <div id="classes" class="table-container">
       <h1>Laude Classes</h1>
       <table class="styled-table" border="0.1px">
         <tr>
@@ -114,7 +123,7 @@
       </table>
     </div>
     <br />
-    <div class="table-container">
+    <div id="summary_end" class="table-container">
       <h1>Laude Points To Be Earned</h1>
       <p>
         Accrue these laude points by year-end upon successful completion of the

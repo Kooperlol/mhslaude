@@ -294,7 +294,7 @@ export default function Calculator() {
               <div key={subject}>
                 <RadioGroup
                   className={subject}
-                  defaultValue="no"
+                  defaultValue={creditClasses.includes(subject) ? "yes" : "no"}
                   onChange={(value) => {
                     value == "yes"
                       ? incrementLaudePoints()
@@ -392,18 +392,24 @@ export default function Calculator() {
               <Radio value="no">No</Radio>
             </Stack>
           </RadioGroup>
-          <Button className="w-fit" onClick={() => setActiveStep(1)} size="lg">
-            Back
-          </Button>
-          <Button
-            className="w-fit"
-            onClick={() => {
-              setActiveStep(3);
-            }}
-            size="lg"
-          >
-            Next
-          </Button>
+          <div className="flex flex-row gap-5">
+            <Button
+              className="w-fit"
+              onClick={() => setActiveStep(1)}
+              size="lg"
+            >
+              Back
+            </Button>
+            <Button
+              className="w-fit"
+              onClick={() => {
+                setActiveStep(3);
+              }}
+              size="lg"
+            >
+              Next
+            </Button>
+          </div>
         </div>
       ),
     },
