@@ -45,6 +45,13 @@
       .table-container {
         margin: 20px 0;
       }
+      .glossary {
+        text-align: center;
+      }
+      .glossary a {
+        text-decoration: none;
+        color: blue;
+      }
     </style>
   </head>
   <body>
@@ -53,16 +60,18 @@
       <h2>Student: {{ student.name }}</h2>
       <h2>Date: {{ current_date }}</h2>
     </div>
-    <br />
-    <a href="#summary">Summary</a>
-    <a href="#projections">Projections</a>
-    <a href="#brackets">Laude Score Brackets</a>
-    {% if student.fourCredits|length > 0 %}
-    <a href="#four_credit">Four Credit Subjects</a>
-    {% endif %}
-    <a href="#classes">Laude Classes</a>
-    <a href="#summary_end">Summary By End of the Year</a>
-    <br />
+    <div class="glossary">
+      <br />
+      <a href="#summary">Summary</a>
+      <a href="#projections">Projections</a>
+      <a href="#brackets">Laude Score Brackets</a>
+      {% if student.fourCredits|length > 0 %}
+      <a href="#four_credit">Four Credit Subjects</a>
+      {% endif %}
+      <a href="#classes">Laude Classes</a>
+      <a href="#summary_end">Summary By End of the Year</a>
+      <br />
+    </div>
     <div id="summary">
       <h1>Summary</h1>
       <p>Laude Status: {{ student.status }}</p>
