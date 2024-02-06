@@ -366,7 +366,7 @@ export default function Calculator() {
           </div>
           <RadioGroup
             name="form-gsp"
-            defaultValue={otherReasons.includes("GSP Qualifier") ? "Yes" : "No"}
+            defaultValue={otherReasons.includes("GSP Qualifier") ? "yes" : "no"}
             onChange={(value) => {
               value == "yes" ? incrementLaudePoints() : decrementLaudePoints();
               toggleOtherReasons("GSP Qualifier");
@@ -382,8 +382,8 @@ export default function Calculator() {
             name="form-apprenticeship"
             defaultValue={
               otherReasons.includes("Youth Apprentinceship Level 2")
-                ? "Yes"
-                : "No"
+                ? "yes"
+                : "no"
             }
             onChange={(value) => {
               value == "yes" ? incrementLaudePoints() : decrementLaudePoints();
