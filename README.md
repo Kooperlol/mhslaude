@@ -8,4 +8,4 @@ To get started head to [MHS Laude](https://www.mhslaude.com/) and follow the ins
 
 ## Help
 
-If there are any issues, please contact proppko@milton.k12.wi.us or kooperjack8@gmail.com.
+If there are any issues, please contact koopercodes@gmail.com
