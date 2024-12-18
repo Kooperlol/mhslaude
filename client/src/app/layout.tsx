@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { ChakraProvider } from "@chakra-ui/react";
 import localFont from "next/font/local";
 import Header from "../components/shared/header";
+import { Analytics } from "@vercel/analytics/next";
 
 // Octin Sports Font
 const bravaSlab = localFont({
@@ -21,7 +22,8 @@ const octinSports = localFont({
 
 export const metadata: Metadata = {
   title: "MHS Laude",
-  description: "",
+  description:
+    "Milton High School's Laude Point Calculator. No more tedious calculations! Simply upload your transcript and instantly get results.",
 };
 
 export default function RootLayout({
@@ -35,6 +37,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/media/favicon.png" />
       </head>
       <body className="bg-background">
+        <Analytics />
         <ChakraProvider>
           <Header />
           {children}

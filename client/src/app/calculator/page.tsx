@@ -5,6 +5,7 @@ import axios from "axios";
 import { Dropzone, ExtFile } from "@dropzone-ui/react";
 import { useRouter } from "next/navigation";
 import { Button } from "../../components/shared/button";
+import { track } from "@vercel/analytics";
 import {
   Box,
   Card,
@@ -156,6 +157,8 @@ export default function Calculator() {
         transcriptFormData
       );
 
+      track("transcript proccessed");
+
       setLoading(false);
 
       // Set data like laude points, student name, and classes
@@ -178,6 +181,7 @@ export default function Calculator() {
       });
     } catch (error) {
       console.error("Error getting laude points:", error);
+      track("error");
       router.push("/error");
     }
   };
@@ -249,12 +253,16 @@ export default function Calculator() {
         a.click();
         window.URL.revokeObjectURL(url);
         document.body.removeChild(a);
+
+        track("pdf report download");
       } else {
         console.error("PDF generation failed!");
+        track("error");
         router.push("/error");
       }
     } catch (error) {
       console.error("Error getting pdf summary:", error);
+      track("error");
       router.push("/error");
     }
   };
