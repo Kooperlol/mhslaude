@@ -37,10 +37,10 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/media/favicon.png" />
       </head>
       <body className="bg-background">
-        <Analytics />
         <ChakraProvider>
           <Header />
           {children}
+          <Analytics />
           <Footer />
         </ChakraProvider>
       </body>
